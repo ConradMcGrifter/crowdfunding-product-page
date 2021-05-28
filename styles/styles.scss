@@ -72,8 +72,65 @@ header {
 }
 
 .content--wrap {
-    background: white;
-    width: 50%;
+    // outline: solid red 2px;
+    width: 100%;
+    max-width: 650px;
     position: relative;
     top: -100px;
+
+    .call-to-action {
+        position: relative;
+        background: white;
+        text-align: center;
+        margin: 0;
+        padding: 2em 1em;
+        border-radius: 10px;
+        // border: solid rgba(0, 0, 0, 0.233) 2px;
+        box-shadow: $boxShadow;
+
+        img {
+            position: absolute;
+            top: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-weight: 700;
+            margin: 0;
+            padding: 1em 0 0 0;
+        }
+        p {
+            color: color(neutral-darkGrey);
+            font-size: 1.4rem;
+        }
+
+        .button-and-bookmark--wrap {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0;
+            width: 95%;
+            margin: auto;
+
+            .bookmarked {
+                @extend #call-to-action__btn;
+                // set this to relative so i can put the bookmarked icon inside of it?
+                position: relative;
+                p {
+                    color: white;
+                }
+            }
+
+            #call-to-action__btn {
+                background: color(primary-dark);
+                color: white;
+                width: 100%;
+                max-width: 175px;
+                padding: 0.15em 1em;
+                border: none;
+                border-radius: 999px;
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
