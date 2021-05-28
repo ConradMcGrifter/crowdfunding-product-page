@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./functions";
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    background: color(primary-dark);
+    margin: 0;
+}
