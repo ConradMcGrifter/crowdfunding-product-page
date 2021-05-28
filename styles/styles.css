@@ -13,17 +13,27 @@ html {
 }
 
 body {
-  height: 100%;
-  background: white;
+  background: linen;
   margin: 0;
   font-size: 1.6rem;
   font-family: "Commissioner", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
-  height: 400px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-desktop.jpg") no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-desktop.jpg") no-repeat;
+  height: 500px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-desktop.jpg") no-repeat center;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-desktop.jpg") no-repeat center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,11 +57,24 @@ header nav {
   width: 78%;
 }
 
-header nav img {
+header nav .nav-content--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-content--wrap img {
   width: 175px;
 }
 
-header nav ul {
+header nav .nav-content--wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,12 +84,19 @@ header nav ul {
   margin: 0;
 }
 
-header nav ul a {
+header nav .nav-content--wrap ul a {
   text-decoration: none;
   color: white;
 }
 
-header nav ul .link-margin {
+header nav .nav-content--wrap ul .link-margin {
   margin: 0 1em;
+}
+
+.content--wrap {
+  background: white;
+  width: 50%;
+  position: relative;
+  top: -100px;
 }
 /*# sourceMappingURL=styles.css.map */

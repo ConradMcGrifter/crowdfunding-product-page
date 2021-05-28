@@ -14,17 +14,21 @@ html {
 }
 
 body {
-    height: 100%;
-    background: white;
+    // min-height: 100%;
+    background: linen;
     margin: 0;
     font-size: 1.6rem;
     font-family: "Commissioner", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    height: 400px;
+    height: 500px;
+    width: 100%;
     background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)),
-        url("../images/image-hero-desktop.jpg") no-repeat;
+        url("../images/image-hero-desktop.jpg") no-repeat center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -37,25 +41,39 @@ header {
         padding: 2em 0 0 0;
         width: 78%;
 
-        img {
-            width: 175px;
-        }
-
-        ul {
+        .nav-content--wrap {
             display: flex;
-            text-decoration: none;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
 
-            a {
-                text-decoration: none;
-                color: white;
+            img {
+                width: 175px;
             }
 
-            .link-margin {
-                margin: 0 1em;
+            ul {
+                display: flex;
+                text-decoration: none;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .link-margin {
+                    margin: 0 1em;
+                }
             }
         }
     }
+}
+
+.content--wrap {
+    background: white;
+    width: 50%;
+    position: relative;
+    top: -100px;
 }
