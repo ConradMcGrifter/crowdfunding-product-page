@@ -4,6 +4,7 @@
 html {
     box-sizing: border-box;
     height: 100%;
+    font-size: 62.5%;
 }
 
 *,
@@ -14,6 +15,47 @@ html {
 
 body {
     height: 100%;
-    background: color(primary-dark);
+    background: white;
     margin: 0;
+    font-size: 1.6rem;
+    font-family: "Commissioner", sans-serif;
+}
+
+header {
+    height: 400px;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)),
+        url("../images/image-hero-desktop.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        // outline: solid red 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2em 0 0 0;
+        width: 78%;
+
+        img {
+            width: 175px;
+        }
+
+        ul {
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .link-margin {
+                margin: 0 1em;
+            }
+        }
+    }
 }

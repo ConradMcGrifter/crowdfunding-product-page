@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
+  font-size: 62.5%;
 }
 
 *,
@@ -13,7 +14,59 @@ html {
 
 body {
   height: 100%;
-  background: #147b74;
+  background: white;
   margin: 0;
+  font-size: 1.6rem;
+  font-family: "Commissioner", sans-serif;
+}
+
+header {
+  height: 400px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-desktop.jpg") no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-desktop.jpg") no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2em 0 0 0;
+  width: 78%;
+}
+
+header nav img {
+  width: 175px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav ul .link-margin {
+  margin: 0 1em;
 }
 /*# sourceMappingURL=styles.css.map */
