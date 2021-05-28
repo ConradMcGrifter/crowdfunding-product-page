@@ -88,7 +88,7 @@ header {
         // border: solid rgba(0, 0, 0, 0.233) 2px;
         box-shadow: $boxShadow;
 
-        img {
+        .mastercraft-logo {
             position: absolute;
             top: 0;
             transform: translate(-50%, -50%);
@@ -112,11 +112,18 @@ header {
             margin: auto;
 
             .bookmarked {
-                @extend #call-to-action__btn;
-                // set this to relative so i can put the bookmarked icon inside of it?
-                position: relative;
+                display: flex;
+                background: color(neutral-darkGrey);
+                align-items: center;
+                justify-content: center;
+                border-radius: 999px;
+                width: 100%;
+                max-width: 175px;
+                justify-content: flex-start;
+
                 p {
                     color: white;
+                    margin: auto;
                 }
             }
 

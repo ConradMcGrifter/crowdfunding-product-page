@@ -111,7 +111,7 @@ header nav .nav-content--wrap ul .link-margin {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.content--wrap .call-to-action img {
+.content--wrap .call-to-action .mastercraft-logo {
   position: absolute;
   top: 0;
   -webkit-transform: translate(-50%, -50%);
@@ -142,14 +142,30 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #7a7a7a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 999px;
+  width: 100%;
+  max-width: 175px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p {
   color: white;
+  margin: auto;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked {
+.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn {
   background: #147b74;
   color: white;
   width: 100%;
