@@ -141,6 +141,18 @@ header nav .nav-content--wrap ul .link-margin {
   margin: auto;
 }
 
+.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn {
+  background: #147b74;
+  color: white;
+  width: 100%;
+  max-width: 175px;
+  padding: 0.15em 1em;
+  border: none;
+  border-radius: 999px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,20 +172,12 @@ header nav .nav-content--wrap ul .link-margin {
           justify-content: flex-start;
 }
 
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn {
+  width: 50px;
+}
+
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p {
   color: white;
   margin: auto;
-}
-
-.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn {
-  background: #147b74;
-  color: white;
-  width: 100%;
-  max-width: 175px;
-  padding: 0.15em 1em;
-  border: none;
-  border-radius: 999px;
-  font-weight: 400;
-  font-size: 1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

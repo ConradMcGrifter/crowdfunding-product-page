@@ -111,22 +111,6 @@ header {
             width: 95%;
             margin: auto;
 
-            .bookmarked {
-                display: flex;
-                background: color(neutral-darkGrey);
-                align-items: center;
-                justify-content: center;
-                border-radius: 999px;
-                width: 100%;
-                max-width: 175px;
-                justify-content: flex-start;
-
-                p {
-                    color: white;
-                    margin: auto;
-                }
-            }
-
             #call-to-action__btn {
                 background: color(primary-dark);
                 color: white;
@@ -138,6 +122,29 @@ header {
                 font-weight: 400;
                 font-size: 1.5rem;
             }
+
+            .bookmarked {
+                display: flex;
+                background: color(neutral-darkGrey);
+                align-items: center;
+                justify-content: center;
+                border-radius: 999px;
+                width: 100%;
+                max-width: 175px;
+                justify-content: flex-start;
+
+
+                .bookmark-btn {
+                    width:50px;
+                }
+
+                p {
+                    color: white;
+                    margin: auto;
+                }
+
+            }
+
         }
     }
 }
