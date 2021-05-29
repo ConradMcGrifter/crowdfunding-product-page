@@ -11,6 +11,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
 }
 
 body {
@@ -83,7 +84,7 @@ header {
         background: white;
         text-align: center;
         margin: 0;
-        padding: 2em 1em;
+        padding: 3em 2em;
         border-radius: 10px;
         // border: solid rgba(0, 0, 0, 0.233) 2px;
         box-shadow: $boxShadow;
@@ -96,7 +97,7 @@ header {
 
         h1 {
             font-weight: 700;
-            margin: 0;
+            margin: 0 0 0.5em 0;
             padding: 1em 0 0 0;
         }
         p {
@@ -107,7 +108,7 @@ header {
         .button-and-bookmark--wrap {
             display: flex;
             justify-content: space-between;
-            padding: 1em 0;
+            padding: 2em 0 0 0;
             width: 95%;
             margin: auto;
 
@@ -121,6 +122,7 @@ header {
                 border-radius: 999px;
                 font-weight: 400;
                 font-size: 1.5rem;
+                cursor: pointer;
             }
 
             .bookmarked {
@@ -130,21 +132,67 @@ header {
                 justify-content: center;
                 border-radius: 999px;
                 width: 100%;
-                max-width: 175px;
+                max-width: max-content;
                 justify-content: flex-start;
-
+                cursor: pointer;
 
                 .bookmark-btn {
-                    width:50px;
+                    width: 50px;
                 }
 
                 p {
                     color: white;
                     margin: auto;
+                    padding: 0 1.5em;
                 }
+            }
+        }
+    }
 
+    .status {
+        @extend .call-to-action;
+        text-align: start;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+
+        .status-info--wrap {
+            display: flex;
+
+            hr {
+                color: rgba(0, 0, 0, 0.164);
             }
 
+            .status-info {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .status-info-content--wrap {
+                    .info {
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+
+        .progress-bar {
+            background: color(neutral-darkGrey);
+            height: 12px;
+            width: 100%;
+            margin-top: 2em;
+            border-radius: 999px;
+            display: flex;
+
+            .meter {
+                width: 70%;
+                background: color(primary-light);
+                height: 100%;
+                border-radius: 999px;
+            }
         }
     }
 }

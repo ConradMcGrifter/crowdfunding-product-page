@@ -10,6 +10,7 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
 }
 
 body {
@@ -100,48 +101,48 @@ header nav .nav-content--wrap ul .link-margin {
   top: -100px;
 }
 
-.content--wrap .call-to-action {
+.content--wrap .call-to-action, .content--wrap .status {
   position: relative;
   background: white;
   text-align: center;
   margin: 0;
-  padding: 2em 1em;
+  padding: 3em 2em;
   border-radius: 10px;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.content--wrap .call-to-action .mastercraft-logo {
+.content--wrap .call-to-action .mastercraft-logo, .content--wrap .status .mastercraft-logo {
   position: absolute;
   top: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.content--wrap .call-to-action h1 {
+.content--wrap .call-to-action h1, .content--wrap .status h1 {
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 0.5em 0;
   padding: 1em 0 0 0;
 }
 
-.content--wrap .call-to-action p {
+.content--wrap .call-to-action p, .content--wrap .status p {
   color: #7a7a7a;
   font-size: 1.4rem;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap {
+.content--wrap .call-to-action .button-and-bookmark--wrap, .content--wrap .status .button-and-bookmark--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1em 0;
+  padding: 2em 0 0 0;
   width: 95%;
   margin: auto;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn {
+.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .status .button-and-bookmark--wrap #call-to-action__btn {
   background: #147b74;
   color: white;
   width: 100%;
@@ -151,9 +152,10 @@ header nav .nav-content--wrap ul .link-margin {
   border-radius: 999px;
   font-weight: 400;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked, .content--wrap .status .button-and-bookmark--wrap .bookmarked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,18 +168,83 @@ header nav .nav-content--wrap ul .link-margin {
           justify-content: center;
   border-radius: 999px;
   width: 100%;
-  max-width: 175px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  cursor: pointer;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .status .button-and-bookmark--wrap .bookmarked .bookmark-btn {
   width: 50px;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p, .content--wrap .status .button-and-bookmark--wrap .bookmarked p {
   color: white;
   margin: auto;
+  padding: 0 1.5em;
+}
+
+.content--wrap .status {
+  text-align: start;
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content--wrap .status .status-info--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content--wrap .status .status-info--wrap hr {
+  color: rgba(0, 0, 0, 0.164);
+}
+
+.content--wrap .status .status-info--wrap .status-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content--wrap .status .status-info--wrap .status-info .status-info-content--wrap .info {
+  margin-top: 1em;
+}
+
+.content--wrap .status .progress-bar {
+  background: #7a7a7a;
+  height: 12px;
+  width: 100%;
+  margin-top: 2em;
+  border-radius: 999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content--wrap .status .progress-bar .meter {
+  width: 70%;
+  background: #3cb4ac;
+  height: 100%;
+  border-radius: 999px;
 }
 /*# sourceMappingURL=styles.css.map */
