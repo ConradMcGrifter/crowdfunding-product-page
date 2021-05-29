@@ -101,7 +101,7 @@ header nav .nav-content--wrap ul .link-margin {
   top: -100px;
 }
 
-.content--wrap .call-to-action, .content--wrap .status {
+.content--wrap .call-to-action, .content--wrap .status, .content--wrap .rewards-section {
   position: relative;
   background: white;
   text-align: center;
@@ -112,25 +112,25 @@ header nav .nav-content--wrap ul .link-margin {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.content--wrap .call-to-action .mastercraft-logo, .content--wrap .status .mastercraft-logo {
+.content--wrap .call-to-action .mastercraft-logo, .content--wrap .status .mastercraft-logo, .content--wrap .rewards-section .mastercraft-logo {
   position: absolute;
   top: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.content--wrap .call-to-action h1, .content--wrap .status h1 {
+.content--wrap .call-to-action h1, .content--wrap .status h1, .content--wrap .rewards-section h1 {
   font-weight: 700;
   margin: 0 0 0.5em 0;
   padding: 1em 0 0 0;
 }
 
-.content--wrap .call-to-action p, .content--wrap .status p {
+.content--wrap .call-to-action p, .content--wrap .status p, .content--wrap .rewards-section p {
   color: #7a7a7a;
   font-size: 1.4rem;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap, .content--wrap .status .button-and-bookmark--wrap {
+.content--wrap .call-to-action .button-and-bookmark--wrap, .content--wrap .status .button-and-bookmark--wrap, .content--wrap .rewards-section .button-and-bookmark--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +142,7 @@ header nav .nav-content--wrap ul .link-margin {
   margin: auto;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .status .button-and-bookmark--wrap #call-to-action__btn {
+.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .status .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .rewards-section .button-and-bookmark--wrap #call-to-action__btn {
   background: #147b74;
   color: white;
   width: 100%;
@@ -155,7 +155,7 @@ header nav .nav-content--wrap ul .link-margin {
   cursor: pointer;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked, .content--wrap .status .button-and-bookmark--wrap .bookmarked {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked, .content--wrap .status .button-and-bookmark--wrap .bookmarked, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,17 +177,17 @@ header nav .nav-content--wrap ul .link-margin {
   cursor: pointer;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .status .button-and-bookmark--wrap .bookmarked .bookmark-btn {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .status .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked .bookmark-btn {
   width: 50px;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p, .content--wrap .status .button-and-bookmark--wrap .bookmarked p {
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p, .content--wrap .status .button-and-bookmark--wrap .bookmarked p, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked p {
   color: white;
   margin: auto;
   padding: 0 1.5em;
 }
 
-.content--wrap .status {
+.content--wrap .status, .content--wrap .rewards-section {
   text-align: start;
   margin-top: 2em;
   display: -webkit-box;
@@ -199,17 +199,17 @@ header nav .nav-content--wrap ul .link-margin {
           flex-direction: column;
 }
 
-.content--wrap .status .status-info--wrap {
+.content--wrap .status .status-info--wrap, .content--wrap .rewards-section .status-info--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content--wrap .status .status-info--wrap hr {
+.content--wrap .status .status-info--wrap hr, .content--wrap .rewards-section .status-info--wrap hr {
   color: rgba(0, 0, 0, 0.164);
 }
 
-.content--wrap .status .status-info--wrap .status-info {
+.content--wrap .status .status-info--wrap .status-info, .content--wrap .rewards-section .status-info--wrap .status-info {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,11 +226,11 @@ header nav .nav-content--wrap ul .link-margin {
           align-items: center;
 }
 
-.content--wrap .status .status-info--wrap .status-info .status-info-content--wrap .info {
+.content--wrap .status .status-info--wrap .status-info .status-info-content--wrap .info, .content--wrap .rewards-section .status-info--wrap .status-info .status-info-content--wrap .info {
   margin-top: 1em;
 }
 
-.content--wrap .status .progress-bar {
+.content--wrap .status .progress-bar, .content--wrap .rewards-section .progress-bar {
   background: #7a7a7a;
   height: 12px;
   width: 100%;
@@ -241,10 +241,57 @@ header nav .nav-content--wrap ul .link-margin {
   display: flex;
 }
 
-.content--wrap .status .progress-bar .meter {
+.content--wrap .status .progress-bar .meter, .content--wrap .rewards-section .progress-bar .meter {
   width: 70%;
   background: #3cb4ac;
   height: 100%;
   border-radius: 999px;
+}
+
+.content--wrap .rewards-section p {
+  line-height: 2;
+  margin: 2em 0;
+}
+
+.content--wrap .rewards-section .rewards {
+  padding: 2em;
+  border: solid rgba(161, 161, 161, 0.295) 2px;
+  border-radius: 10px;
+  margin-top: 1.5em;
+}
+
+.content--wrap .rewards-section .rewards .rewards__content--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content--wrap .rewards-section .rewards .rewards__content--wrap .rewards__pledge-ammount {
+  color: #3cb4ac;
+}
+
+.content--wrap .rewards-section .rewards .rewards__content--wrap .reward-btn {
+  background: #3cb4ac;
+  color: white;
+  width: 100%;
+  max-width: 175px;
+  padding: 1em;
+  border: none;
+  border-radius: 999px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content--wrap .rewards-section .rewards .rewards__content--wrap .number-left--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

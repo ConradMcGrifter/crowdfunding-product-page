@@ -25,6 +25,8 @@ body {
     align-items: center;
 }
 
+
+
 header {
     height: 500px;
     width: 100%;
@@ -195,4 +197,60 @@ header {
             }
         }
     }
+
+
+    .rewards-section {
+        @extend .status;
+       
+
+        p {
+            line-height:2;
+            margin:2em 0;
+        }
+
+        .about {
+            // outline:solid red 1px;
+
+        }
+
+        .rewards {
+            
+            padding:2em;
+            border: solid rgba(161, 161, 161, 0.295) 2px;
+            border-radius:10px;
+            margin-top:1.5em;
+            
+
+            .rewards__content--wrap {
+                // background:lightblue;
+                display:flex;
+                justify-content: space-between;
+                
+
+                .rewards__pledge-ammount {
+                    color:color(primary-light);
+                }
+
+                .reward-btn {
+                    background: color(primary-light);
+                    color: white;
+                    width: 100%;
+                    max-width: 175px;
+                    padding: 1em;
+                    border: none;
+                    border-radius: 999px;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    
+                }
+
+                .number-left--wrap {
+                    display:flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
 }
+
