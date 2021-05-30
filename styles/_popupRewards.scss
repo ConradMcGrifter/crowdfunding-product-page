@@ -1,0 +1,80 @@
+#back-this-project-card {
+    border-radius:10px;
+    background:white;
+    max-width:650px;
+    width:100%;
+    padding:2em;
+    position:absolute;
+    top:100px;
+    z-index:999;
+    display:none;
+    flex-direction:column;
+
+    img {
+        height:15px;
+        width:15px;
+        position:absolute;
+        right:25px;
+        top:25px;
+        cursor: pointer;
+    }
+
+    p {
+        line-height:1.6;
+        font-size:1.4rem;
+    }
+
+    &.display {
+        display:flex;
+    }
+
+    .no-reward-pledge {
+        border:solid rgba(161, 161, 161, 0.295) 2px;
+        border-radius:10px;
+        display: flex;
+        align-items: flex-start;
+        padding:1em;
+        margin-top:1em;
+
+        &__info--wrap {
+            
+            padding:1em;
+            
+        }
+
+        &__radio-btn {
+           margin-top:1.5em;
+        }
+
+        &__h4 {
+            margin-bottom:1em;
+            
+        }
+
+        &.display {
+          border: solid hsl(176, 72%, 28%) 2px;
+        }
+
+    }
+
+
+}
+
+#lightbox {
+    position:fixed;
+    background:rgba(0, 0, 0, 0.459);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:none;
+    
+    
+    &.display {
+        display:flex;
+    }
+}
+
+// body.display {
+//     overflow:hidden;
+// }

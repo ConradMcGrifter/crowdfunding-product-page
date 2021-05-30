@@ -1,33 +1,82 @@
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: 0;
-}
-
-body {
-  background: linen;
-  margin: 0;
-  font-size: 1.6rem;
-  font-family: "Commissioner", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#back-this-project-card {
+  border-radius: 10px;
+  background: white;
+  max-width: 650px;
+  width: 100%;
+  padding: 2em;
+  position: absolute;
+  top: 100px;
+  z-index: 999;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+#back-this-project-card img {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+#back-this-project-card p {
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+#back-this-project-card.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#back-this-project-card .no-reward-pledge {
+  border: solid rgba(161, 161, 161, 0.295) 2px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+#back-this-project-card .no-reward-pledge__info--wrap {
+  padding: 1em;
+}
+
+#back-this-project-card .no-reward-pledge__radio-btn {
+  margin-top: 1.5em;
+}
+
+#back-this-project-card .no-reward-pledge__h4 {
+  margin-bottom: 1em;
+}
+
+#back-this-project-card .no-reward-pledge.display {
+  border: solid #147b74 2px;
+}
+
+#lightbox {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.459);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+#lightbox.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header {
@@ -260,7 +309,7 @@ header nav .nav-content--wrap ul .link-margin {
   margin-top: 1.5em;
 }
 
-.content--wrap .rewards-section .rewards .rewards__content--wrap {
+.content--wrap .rewards-section .rewards__content--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,11 +318,11 @@ header nav .nav-content--wrap ul .link-margin {
           justify-content: space-between;
 }
 
-.content--wrap .rewards-section .rewards .rewards__content--wrap .rewards__pledge-ammount {
+.content--wrap .rewards-section .rewards__pledge-ammount {
   color: #3cb4ac;
 }
 
-.content--wrap .rewards-section .rewards .rewards__content--wrap .reward-btn {
+.content--wrap .rewards-section .reward-btn {
   background: #3cb4ac;
   color: white;
   width: 100%;
@@ -286,10 +335,50 @@ header nav .nav-content--wrap ul .link-margin {
   cursor: pointer;
 }
 
-.content--wrap .rewards-section .rewards .rewards__content--wrap .number-left--wrap {
+.content--wrap .rewards-section .number-left--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content--wrap .rewards-section .rewards--out-of-stock {
+  opacity: .5;
+}
+
+.content--wrap .rewards-section .rewards--out-of-stock .reward-btn--out-of-stock {
+  background: gray;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  background: linen;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Commissioner", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

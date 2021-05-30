@@ -56,6 +56,7 @@
                     eye strain.
                 </p>
                 <div class="button-and-bookmark--wrap">
+                    
                     <button id="call-to-action__btn">Back this project</button>
                     <div class="bookmarked">
                         <img
@@ -149,7 +150,7 @@
                     </p>
                     <div class="rewards__content--wrap">
                         <div class="number-left--wrap">
-                            <h2 class="rewards__h3">64</h3>
+                            <h2 class="rewards__h3">64</h2>
                             <span class="left">left</span>
                         </div>
                         <button class="reward-btn">Select Reward</button>
@@ -157,44 +158,56 @@
                 </div>
 
                 <!-- rewards #3 -->
-                <div class="rewards">
+                <div class="rewards rewards--out-of-stock">
                     <div class="rewards__content--wrap">
                         <h3 class="rewards__h3">
-                            Bamboo Stand
+                            Mahogany Special Edition
                         </h3>
                         <span class="rewards__pledge-ammount">
-                            Pledge $25 or more
+                            Pledge $200 or more
                         </span>
                     </div>
                     <p class="rewards__p">
-                        You get an ergonomic stand made of
-                        natural bamboo. You've helped us launch our promotional campaign, and
-                        you’ll be added to a special Backer member list.
+                        You get two Special Edition Mahogany
+                        stands, a Backer T-Shirt, and a personal thank you. You’ll be added to
+                        our Backer member list. Shipping is included.
                     </p>
                     <div class="rewards__content--wrap">
                         <div class="number-left--wrap">
-                            <h2 class="rewards__h3">101</h3>
+                            <h2 class="rewards__h3">0</h2>
                             <span class="left">left</span>
                         </div>
-                        <button class="reward-btn">Select Reward</button>
+                        <button class="reward-btn reward-btn--out-of-stock">Out of Stock</button>
                     </div>
                 </div>
             </section>
-        </div>
-
- 
             
-          Select Reward Mahogany
-        Special Edition Pledge $200 or more You get two Special Edition Mahogany
-        stands, a Backer T-Shirt, and a personal thank you. You’ll be added to
-        our Backer member list. Shipping is included. 0 left Out of Stock
+           
+        </div>
+        <div id="back-this-project-card">
+            <img src="./images/icon-close-modal.svg" id="x-btn"alt="x-btn" onclick="openCloseProjectCard()">
+            <h4 class="back-this-project-card__h4"> Back this project</h4>
+            <p class="back-this-project-card__p">Want to support us in bringing Mastercraft Bamboo
+                Monitor Riser out in the world?</p>
+
+            <div class="no-reward-pledge">
+                <input type="radio" name="reward" class="no-reward-pledge__radio-btn" id="radio-1">
+                <div class="no-reward-pledge__info--wrap">
+                    <h4 class="no-reward-pledge__h4">Pledge with no reward</h4>
+                    <p class="no-reward-pledge__p">Choose to support
+                        us without a reward if you simply believe in our project. As a backer,
+                        you will be signed up to receive product updates via email.</p>
+                </div>
+            </div> 
+
+        </div>
+        <section id="lightbox"></section>  
+            
+         
 
         <!-- Selection modal start -->
 
-        Back this project Want to support us in bringing Mastercraft Bamboo
-        Monitor Riser out in the world? Pledge with no reward Choose to support
-        us without a reward if you simply believe in our project. As a backer,
-        you will be signed up to receive product updates via email. Bamboo Stand
+           Bamboo Stand
         Pledge $25 or more You get an ergonomic stand made of natural bamboo.
         You've helped us launch our promotional campaign, and you’ll be added to
         a special Backer member list. 101 left
@@ -228,5 +241,6 @@
         email once our campaign is completed. Got it!
 
         <!-- Success modal end -->
+        <script src="script.js"></script>
     </body>
 </html>

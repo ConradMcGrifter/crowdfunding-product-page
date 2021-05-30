@@ -1,8 +1,10 @@
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
 $colors: (
     primary-light: hsl(176, 50%, 47%),
     primary-dark: hsl(176, 72%, 28%),
     neutral-black: hsl(0, 0%, 0%),
     neutral-darkGrey: hsl(0, 0%, 48%),
 );
-
-$boxShadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
