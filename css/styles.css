@@ -424,7 +424,6 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .status .progress-bar .meter, .content--wrap .rewards-section .progress-bar .meter {
-  width: 70%;
   background: #3cb4ac;
   height: 100%;
   border-radius: 999px;
@@ -478,7 +477,7 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .rewards-section .rewards--out-of-stock {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .content--wrap .rewards-section .rewards--out-of-stock .reward-btn--out-of-stock {

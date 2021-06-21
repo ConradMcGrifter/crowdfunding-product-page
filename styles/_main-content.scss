@@ -114,7 +114,7 @@
             display: flex;
 
             .meter {
-                width: 70%;
+                // width: 70%;
                 background: color(primary-light);
                 height: 100%;
                 border-radius: 999px;
@@ -122,35 +122,29 @@
         }
     }
 
-
     .rewards-section {
         @extend .status;
-       
 
         p {
-            line-height:2;
-            margin:2em 0;
+            line-height: 2;
+            margin: 2em 0;
         }
 
-       
-
         .rewards {
-            
-            padding:2em;
+            padding: 2em;
             border: solid rgba(161, 161, 161, 0.295) 2px;
-            border-radius:10px;
-            margin-top:1.5em; 
+            border-radius: 10px;
+            margin-top: 1.5em;
         }
 
         .rewards__content--wrap {
             // background:lightblue;
-            display:flex;
+            display: flex;
             justify-content: space-between;
-        
         }
 
         .rewards__pledge-ammount {
-            color:color(primary-light);
+            color: color(primary-light);
         }
 
         .reward-btn {
@@ -164,21 +158,19 @@
             font-weight: 400;
             font-size: 1.5rem;
             cursor: pointer;
-            
         }
 
         .number-left--wrap {
-            display:flex;
+            display: flex;
             align-items: center;
         }
 
         .rewards--out-of-stock {
-            opacity: .5;
-    
-           .reward-btn--out-of-stock {
-               background:rgb(128, 128, 128);
-           }
-        }
+            opacity: 0.5;
 
+            .reward-btn--out-of-stock {
+                background: rgb(128, 128, 128);
+            }
+        }
     }
 }
