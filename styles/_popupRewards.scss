@@ -102,6 +102,10 @@
             justify-content: space-between;
 
             h4 {
+                &:hover {
+                    color: color(primary-light);
+                    cursor: pointer;
+                }
                 span {
                     color: color(primary-light);
                     margin-left: 0.5em;

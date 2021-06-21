@@ -97,6 +97,11 @@
           justify-content: space-between;
 }
 
+#back-this-project-card .reward .reward__info-header h4:hover {
+  color: #3cb4ac;
+  cursor: pointer;
+}
+
 #back-this-project-card .reward .reward__info-header h4 span {
   color: #3cb4ac;
   margin-left: 0.5em;

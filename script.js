@@ -9,6 +9,12 @@ let radio2 = document.getElementById("radio-2");
 let radio3 = document.getElementById("radio-3");
 
 const radioButtons = document.querySelectorAll(".radio");
+const rewardH4 = document.querySelectorAll(".reward__h4");
+
+const header1 = document.querySelector(".header-1");
+const header2 = document.querySelector(".header-2");
+const header3 = document.querySelector(".header-3");
+const header4 = document.querySelector(".header-4");
 
 callToActionBtn.addEventListener("click", openCloseProjectCard);
 callToActionBtn.addEventListener("click", scrollIntoView);
@@ -47,50 +53,142 @@ radio2.checked = false;
 //     }
 // });
 
-for (let i = 0; i < radioButtons.length; i++) {
-    radioButtons[i].addEventListener("click", () => {
-        if (radio1.checked) {
-            document
-                .querySelector(".no-reward-pledge")
-                .classList.add("display");
+header1.addEventListener("click", () => {
+    radio1.checked = true;
+    radio2.checked = false;
+    radio3.checked = false;
 
-            document
-                .querySelector(".no-reward__enter-pledge")
-                .classList.add("display");
-        } else {
-            document
-                .querySelector(".no-reward-pledge")
-                .classList.remove("display");
+    document
+        .querySelector(".bamboo-stand__enter-pledge")
+        .classList.remove("display");
+    document.querySelector(".bamboo-stand").classList.remove("display");
 
-            document
-                .querySelector(".no-reward__enter-pledge")
-                .classList.remove("display");
-        }
+    document.querySelector(".black-edition").classList.remove("display");
+    document
+        .querySelector(".black-edition__enter-pledge")
+        .classList.remove("display");
 
-        if (radio2.checked) {
-            document
-                .querySelector(".bamboo-stand__enter-pledge")
-                .classList.add("display");
-            document.querySelector(".bamboo-stand").classList.add("display");
-        } else {
-            document
-                .querySelector(".bamboo-stand__enter-pledge")
-                .classList.remove("display");
-            document.querySelector(".bamboo-stand").classList.remove("display");
-        }
+    if (radio1.checked) {
+        document.querySelector(".no-reward-pledge").classList.add("display");
 
-        if (radio3.checked) {
-            document
-                .querySelector(".black-edition__enter-pledge")
-                .classList.add("display");
-            document.querySelector(".black-edition").classList.add("display");
-        } else {
-            document
-                .querySelector(".black-edition")
-                .classList.remove("display");
-            document
-                .querySelector(".black-edition__enter-pledge")
-                .classList.remove("display");
-        }
-    });
+        document
+            .querySelector(".no-reward__enter-pledge")
+            .classList.add("display");
+    } else {
+        document.querySelector(".no-reward-pledge").classList.remove("display");
+
+        document
+            .querySelector(".no-reward__enter-pledge")
+            .classList.remove("display");
+    }
+});
+
+header2.addEventListener("click", () => {
+    radio2.checked = true;
+    radio1.checked = false;
+    radio3.checked = false;
+
+    document.querySelector(".no-reward-pledge").classList.remove("display");
+    document
+        .querySelector(".no-reward__enter-pledge")
+        .classList.remove("display");
+
+    document.querySelector(".black-edition").classList.remove("display");
+    document
+        .querySelector(".black-edition__enter-pledge")
+        .classList.remove("display");
+
+    if (radio2.checked) {
+        document
+            .querySelector(".bamboo-stand__enter-pledge")
+            .classList.add("display");
+        document.querySelector(".bamboo-stand").classList.add("display");
+    } else {
+        document
+            .querySelector(".bamboo-stand__enter-pledge")
+            .classList.remove("display");
+        document.querySelector(".bamboo-stand").classList.remove("display");
+    }
+});
+
+header3.addEventListener("click", () => {
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = true;
+
+    document.querySelector(".no-reward-pledge").classList.remove("display");
+
+    document
+        .querySelector(".no-reward__enter-pledge")
+        .classList.remove("display");
+
+    document
+        .querySelector(".bamboo-stand__enter-pledge")
+        .classList.remove("display");
+    document.querySelector(".bamboo-stand").classList.remove("display");
+
+    if (radio3.checked) {
+        document
+            .querySelector(".black-edition__enter-pledge")
+            .classList.add("display");
+        document.querySelector(".black-edition").classList.add("display");
+    } else {
+        document.querySelector(".black-edition").classList.remove("display");
+        document
+            .querySelector(".black-edition__enter-pledge")
+            .classList.remove("display");
+    }
+});
+
+//
+//
+//
+function radioSelect() {
+    if (radio1.checked) {
+        document.querySelector(".no-reward-pledge").classList.add("display");
+
+        document
+            .querySelector(".no-reward__enter-pledge")
+            .classList.add("display");
+    } else {
+        document.querySelector(".no-reward-pledge").classList.remove("display");
+
+        document
+            .querySelector(".no-reward__enter-pledge")
+            .classList.remove("display");
+    }
+
+    if (radio2.checked) {
+        document
+            .querySelector(".bamboo-stand__enter-pledge")
+            .classList.add("display");
+        document.querySelector(".bamboo-stand").classList.add("display");
+    } else {
+        document
+            .querySelector(".bamboo-stand__enter-pledge")
+            .classList.remove("display");
+        document.querySelector(".bamboo-stand").classList.remove("display");
+    }
+
+    if (radio3.checked) {
+        document
+            .querySelector(".black-edition__enter-pledge")
+            .classList.add("display");
+        document.querySelector(".black-edition").classList.add("display");
+    } else {
+        document.querySelector(".black-edition").classList.remove("display");
+        document
+            .querySelector(".black-edition__enter-pledge")
+            .classList.remove("display");
+    }
 }
+
+for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].addEventListener("click", radioSelect);
+}
+
+// rewardH4.forEach((h4) => {
+//     h4.addEventListener("click", () => {
+
+//     });
+// });
