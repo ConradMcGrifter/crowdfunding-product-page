@@ -1,3 +1,8 @@
-
-
 $boxShadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+@mixin flexCenter($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}

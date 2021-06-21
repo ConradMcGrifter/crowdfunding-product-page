@@ -1,8 +1,8 @@
-@import "./abstracts/variables";
-@import "./abstracts/functions";
-@import "./popupRewards";
-@import "./header";
-@import "./main-content";
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "popupRewards";
+@import "header";
+@import "main-content";
 
 html {
     box-sizing: border-box;
@@ -27,11 +27,3 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-
-
-
-
