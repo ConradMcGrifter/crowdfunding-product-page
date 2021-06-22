@@ -25,6 +25,9 @@
     text-align: center;
     padding: 2em;
 
+    position: relative;
+    top: -100px;
+
     @include mobileSize {
         width: auto;
         margin: 1em;
