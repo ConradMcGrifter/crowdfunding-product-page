@@ -32,7 +32,7 @@ let radio2 = document.getElementById("radio-2");
 let radio3 = document.getElementById("radio-3");
 
 const radioButtons = document.querySelectorAll(".radio");
-
+const hamburger = document.getElementById("hamburger");
 const number = document.querySelector(".number");
 const continue1 = document.getElementById("no-reward--continue");
 const header1 = document.querySelector(".header-1");
@@ -87,7 +87,7 @@ function openCloseProjectCard() {
     radio2.checked = false;
     radio3.checked = false;
 
-    body.style.overflow = "visible";
+    // body.style.overflow = "visible";
 
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
@@ -122,7 +122,7 @@ function continueThankYou() {
     blackEditionPledge.classList.remove("display");
 
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.style.overflow = "hidden";
+    body.classList.toggle("display");
 
     scrollIntoView();
 }
@@ -334,14 +334,14 @@ continue3.addEventListener("click", () => {
 thankYouBtn.addEventListener("click", () => {
     document.querySelector(".thank-you--container").classList.toggle("display");
 
-    body.style.overflow = "visible";
+    body.classList.toggle("display");
     lightBox.classList.toggle("display");
 });
 
 selectRewardBamboo.addEventListener("click", () => {
     lightBox.classList.toggle("display");
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.style.overflow = "hidden";
+    body.classList.toggle("display");
 
     bambooCounter -= 1;
     bambooAmount.innerHTML = bambooCounter;
@@ -359,7 +359,7 @@ selectRewardBamboo.addEventListener("click", () => {
 selectRewardBlackEdition.addEventListener("click", () => {
     lightBox.classList.toggle("display");
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.style.overflow = "hidden";
+    body.classList.toggle("display");
 
     blackEditionCounter -= 1;
     blackEditionAmount.innerHTML = blackEditionCounter;
@@ -385,5 +385,23 @@ bookmark.addEventListener("click", () => {
         bookmarkIcon.setAttribute("src", "images/icon-bookmark.svg");
         document.querySelector(".bookmark__p").innerHTML = "Bookmark";
         document.querySelector(".bookmark__p").classList.remove("display");
+    }
+});
+
+hamburger.addEventListener("click", () => {
+    document.querySelector(".ul--wrap").classList.toggle("display");
+    document.querySelector(".darken").classList.toggle("display");
+    document.getElementById("navUl").classList.toggle("display");
+
+    body.classList.toggle("display");
+
+    document
+        .querySelector(".hamburger-icon")
+        .setAttribute("src", "images/icon-close-menu.svg");
+
+    if (!document.querySelector(".ul--wrap").classList.contains("display")) {
+        document
+            .querySelector(".hamburger-icon")
+            .setAttribute("src", "images/icon-hamburger.svg");
     }
 });

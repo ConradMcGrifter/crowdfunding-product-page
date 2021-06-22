@@ -25,6 +25,11 @@
     text-align: center;
     padding: 2em;
 
+    @include mobileSize {
+        width: auto;
+        margin: 1em;
+    }
+
     .thank-you__button {
         margin-top: 2em;
         border-radius: 999px;

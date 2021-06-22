@@ -25,14 +25,56 @@ header {
         padding: 2em 0 0 0;
         width: 78%;
 
+        @include mobileSize {
+            width: 100%;
+            padding: 1em;
+        }
+
         .nav-content--wrap {
+            position: relative;
+            z-index: 998;
             display: flex;
             width: 100%;
             justify-content: space-between;
             align-items: center;
 
+            @include mobileSize {
+                flex-wrap: wrap;
+            }
+
+            #hamburger {
+                width: 35px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: none;
+
+                @include mobileSize {
+                    display: block;
+                }
+
+                img {
+                    width: 100%;
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+
             img {
                 width: 175px;
+            }
+
+            .ul--wrap {
+                position: relative;
+
+                @include mobileSize {
+                    width: 100%;
+                    visibility: hidden;
+
+                    &.display {
+                        visibility: visible;
+                    }
+                }
             }
 
             ul {
@@ -42,13 +84,44 @@ header {
                 padding: 0;
                 margin: 0;
 
+                &.display {
+                    transform: translateY(0px);
+                }
+
+                @include mobileSize {
+                    width: 100%;
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                    // padding: 1.5em;
+                    border-radius: 7px;
+                    position: absolute;
+                    top: 30px;
+                    z-index: 999;
+                    transition: transform 1s;
+                    transform: translateY(-50px);
+                }
+
                 a {
                     text-decoration: none;
                     color: white;
+                    padding: 1.25em;
+
+                    @include mobileSize {
+                        color: black;
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
                 }
 
                 .link-margin {
                     margin: 0 1em;
+
+                    @include mobileSize {
+                        margin: 0;
+                        border-top: solid 1px rgba(0, 0, 0, 0.15);
+                        border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+                    }
                 }
             }
         }

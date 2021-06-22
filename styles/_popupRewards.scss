@@ -13,6 +13,7 @@
     @include mobileSize {
         width: initial;
         margin: 1em;
+        top: 100px;
     }
 
     img {
@@ -222,6 +223,7 @@
     bottom: 0;
     left: 0;
     display: none;
+    z-index: 998;
 
     &.display {
         display: flex;
