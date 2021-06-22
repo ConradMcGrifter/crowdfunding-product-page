@@ -351,7 +351,11 @@ selectRewardBamboo.addEventListener("click", () => {
     totalBackers.innerHTML = totalBackersCounter.toLocaleString();
 
     counter += 25;
-    number.innerHTML = counter.toLocaleString();
+    if (counter >= 100000) {
+        number.innerHTML = "Goal met!";
+    } else {
+        number.innerHTML = counter.toLocaleString();
+    }
 
     scrollIntoView();
 });
@@ -369,7 +373,11 @@ selectRewardBlackEdition.addEventListener("click", () => {
     totalBackers.innerHTML = totalBackersCounter.toLocaleString();
 
     counter += 75;
-    number.innerHTML = counter.toLocaleString();
+    if (counter >= 100000) {
+        number.innerHTML = "Goal met!";
+    } else {
+        number.innerHTML = counter.toLocaleString();
+    }
 
     scrollIntoView();
 });
