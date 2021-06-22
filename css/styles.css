@@ -14,6 +14,13 @@
           flex-direction: column;
 }
 
+@media only screen and (max-width: 750px) {
+  #back-this-project-card {
+    width: initial;
+    margin: 1em;
+  }
+}
+
 #back-this-project-card img {
   height: 15px;
   width: 15px;
@@ -107,6 +114,11 @@
   margin-left: 0.5em;
 }
 
+#back-this-project-card .reward .reward__info-header .header-4:hover {
+  color: initial;
+  cursor: initial;
+}
+
 #back-this-project-card .reward .reward__info-header .ammount--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,6 +150,15 @@
           align-items: center;
 }
 
+@media only screen and (max-width: 750px) {
+  #back-this-project-card .reward .reward__enter-pledge {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #back-this-project-card .reward .reward__enter-pledge.display {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +168,12 @@
 #back-this-project-card .reward .reward__enter-pledge .pledge__p {
   color: #7a7a7a;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 750px) {
+  #back-this-project-card .reward .reward__enter-pledge .pledge__p {
+    margin-bottom: 1.5em;
+  }
 }
 
 #back-this-project-card .reward .no-reward__enter-pledge {
@@ -230,6 +257,15 @@ header {
           justify-content: center;
 }
 
+@media only screen and (max-width: 750px) {
+  header {
+    height: 350px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-mobile.jpg") no-repeat center;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-mobile.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,6 +321,12 @@ header nav .nav-content--wrap ul .link-margin {
   max-width: 650px;
   position: relative;
   top: -100px;
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap {
+    padding: 1em;
+  }
 }
 
 .content--wrap .call-to-action, .content--wrap .status, .content--wrap .rewards-section {
@@ -367,7 +409,17 @@ header nav .nav-content--wrap ul .link-margin {
   cursor: pointer;
 }
 
-.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .status .button-and-bookmark--wrap .bookmarked .bookmark-btn, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked .bookmark-btn {
+@media only screen and (max-width: 750px) {
+  .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked, .content--wrap .status .button-and-bookmark--wrap .bookmarked, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked {
+    margin-left: 1em;
+  }
+}
+
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked.display, .content--wrap .status .button-and-bookmark--wrap .bookmarked.display, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked.display {
+  background: rgba(101, 179, 174, 0.253);
+}
+
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked .bookmark-icon, .content--wrap .status .button-and-bookmark--wrap .bookmarked .bookmark-icon, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked .bookmark-icon {
   width: 50px;
 }
 
@@ -375,6 +427,16 @@ header nav .nav-content--wrap ul .link-margin {
   color: white;
   margin: auto;
   padding: 0 1.5em;
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p, .content--wrap .status .button-and-bookmark--wrap .bookmarked p, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked p {
+    display: none;
+  }
+}
+
+.content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p.display, .content--wrap .status .button-and-bookmark--wrap .bookmarked p.display, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked p.display {
+  color: #147b74;
 }
 
 .content--wrap .status, .content--wrap .rewards-section {
@@ -395,8 +457,28 @@ header nav .nav-content--wrap ul .link-margin {
   display: flex;
 }
 
+@media only screen and (max-width: 750px) {
+  .content--wrap .status .status-info--wrap, .content--wrap .rewards-section .status-info--wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
 .content--wrap .status .status-info--wrap hr, .content--wrap .rewards-section .status-info--wrap hr {
   color: rgba(0, 0, 0, 0.164);
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap .status .status-info--wrap hr, .content--wrap .rewards-section .status-info--wrap hr {
+    width: 25%;
+    margin: 1em 0;
+  }
 }
 
 .content--wrap .status .status-info--wrap .status-info, .content--wrap .rewards-section .status-info--wrap .status-info {
@@ -421,7 +503,7 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .status .progress-bar, .content--wrap .rewards-section .progress-bar {
-  background: #7a7a7a;
+  background: lightgray;
   height: 12px;
   width: 100%;
   margin-top: 2em;
@@ -458,8 +540,28 @@ header nav .nav-content--wrap ul .link-margin {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 750px) {
+  .content--wrap .rewards-section .rewards__content--wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.content--wrap .rewards-section .rewards__content--wrap .left {
+  margin-left: 0.5em;
+  color: #7a7a7a;
+}
+
 .content--wrap .rewards-section .rewards__pledge-ammount {
   color: #3cb4ac;
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap .rewards-section .rewards__pledge-ammount {
+    margin-top: 0.5em;
+  }
 }
 
 .content--wrap .rewards-section .reward-btn {
@@ -473,6 +575,12 @@ header nav .nav-content--wrap ul .link-margin {
   font-weight: 400;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap .rewards-section .reward-btn {
+    margin-top: 1em;
+  }
 }
 
 .content--wrap .rewards-section .reward-btn:hover {
@@ -529,6 +637,7 @@ header nav .nav-content--wrap ul .link-margin {
 .thank-you--wrap {
   background: white;
   width: 25%;
+  min-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +693,7 @@ html {
 }
 
 body {
-  background: linen;
+  background: #fffbf7;
   margin: 0;
   font-size: 1.6rem;
   font-family: "Commissioner", sans-serif;

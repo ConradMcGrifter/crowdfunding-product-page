@@ -5,6 +5,10 @@
     position: relative;
     top: -100px;
 
+    @include mobileSize {
+        padding: 1em;
+    }
+
     .call-to-action {
         position: relative;
         background: white;
@@ -66,7 +70,15 @@
                 justify-content: flex-start;
                 cursor: pointer;
 
-                .bookmark-btn {
+                @include mobileSize {
+                    margin-left: 1em;
+                }
+
+                &.display {
+                    background: hsla(176, 34%, 55%, 0.253);
+                }
+
+                .bookmark-icon {
                     width: 50px;
                 }
 
@@ -74,6 +86,14 @@
                     color: white;
                     margin: auto;
                     padding: 0 1.5em;
+
+                    @include mobileSize {
+                        display: none;
+                    }
+
+                    &.display {
+                        color: color(primary-dark);
+                    }
                 }
             }
         }
@@ -89,8 +109,19 @@
         .status-info--wrap {
             display: flex;
 
+            @include mobileSize {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
             hr {
                 color: rgba(0, 0, 0, 0.164);
+
+                @include mobileSize {
+                    width: 25%;
+                    margin: 1em 0;
+                }
             }
 
             .status-info {
@@ -110,7 +141,7 @@
         }
 
         .progress-bar {
-            background: color(neutral-darkGrey);
+            background: lightgray;
             height: 12px;
             width: 100%;
             margin-top: 2em;
@@ -145,10 +176,23 @@
             // background:lightblue;
             display: flex;
             justify-content: space-between;
+
+            @include mobileSize {
+                flex-direction: column;
+            }
+
+            .left {
+                margin-left: 0.5em;
+                color: color(neutral-darkGrey);
+            }
         }
 
         .rewards__pledge-ammount {
             color: color(primary-light);
+
+            @include mobileSize {
+                margin-top: 0.5em;
+            }
         }
 
         .reward-btn {
@@ -162,6 +206,10 @@
             font-weight: 400;
             font-size: 1.5rem;
             cursor: pointer;
+
+            @include mobileSize {
+                margin-top: 1em;
+            }
 
             &:hover {
                 background: color(primary-dark);

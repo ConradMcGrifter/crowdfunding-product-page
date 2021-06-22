@@ -14,6 +14,9 @@ let blackEditionAmountSmall = document.getElementById(
 bambooCounter = 101;
 blackEditionCounter = 64;
 
+let selectRewardBamboo = document.getElementById("select-Bamboo");
+let selectRewardBlackEdition = document.getElementById("select-BlackEdition");
+
 let callToActionBtn = document.getElementById("call-to-action__btn");
 let thankYouBtn = document.querySelector(".thank-you__button");
 let backThisProjectCard = document.getElementById("back-this-project-card");
@@ -21,6 +24,8 @@ let lightBox = document.getElementById("lightbox");
 let body = document.querySelector("body");
 let xButton = document.getElementById("x-btn");
 let meter = document.querySelector(".meter");
+let bookmark = document.querySelector(".bookmarked");
+let bookmarkIcon = document.querySelector(".bookmark-icon");
 
 let radio1 = document.getElementById("radio-1");
 let radio2 = document.getElementById("radio-2");
@@ -217,6 +222,12 @@ input2.value = null;
 number.innerHTML = "$" + counter.toLocaleString();
 totalBackers.innerHTML = totalBackersCounter.toLocaleString();
 
+// this sets the number left of things on page load
+bambooAmount.innerHTML = bambooCounter.toLocaleString();
+bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
+blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
+blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
+
 // continue buttons logic after a pledge is made
 continue1.addEventListener("click", () => {
     totalBackersCounter += 1;
@@ -228,7 +239,7 @@ continue1.addEventListener("click", () => {
 continue2.addEventListener("click", () => {
     // check if the input value is less than $25
     if (input1.value < 25) {
-        return alert("Please enter the minimum ammount");
+        return alert("Please enter the minimum amount");
     }
 
     // convert the string value to a number and add it to the counter variable
@@ -278,7 +289,7 @@ continue2.addEventListener("click", () => {
 
 continue3.addEventListener("click", () => {
     if (input2.value < 75) {
-        return alert("error");
+        return alert("Please enter the minimum amount");
     }
 
     counter += parseInt(input2.value);
@@ -325,4 +336,54 @@ thankYouBtn.addEventListener("click", () => {
 
     body.style.overflow = "visible";
     lightBox.classList.toggle("display");
+});
+
+selectRewardBamboo.addEventListener("click", () => {
+    lightBox.classList.toggle("display");
+    document.querySelector(".thank-you--container").classList.toggle("display");
+    body.style.overflow = "hidden";
+
+    bambooCounter -= 1;
+    bambooAmount.innerHTML = bambooCounter;
+    bambooAmountSmall.innerHTML = bambooCounter;
+
+    totalBackersCounter += 1;
+    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    counter += 25;
+    number.innerHTML = counter.toLocaleString();
+
+    scrollIntoView();
+});
+
+selectRewardBlackEdition.addEventListener("click", () => {
+    lightBox.classList.toggle("display");
+    document.querySelector(".thank-you--container").classList.toggle("display");
+    body.style.overflow = "hidden";
+
+    blackEditionCounter -= 1;
+    blackEditionAmount.innerHTML = blackEditionCounter;
+    blackEditionAmountSmall.innerHTML = blackEditionCounter;
+
+    totalBackersCounter += 1;
+    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    counter += 75;
+    number.innerHTML = counter.toLocaleString();
+
+    scrollIntoView();
+});
+
+bookmark.addEventListener("click", () => {
+    bookmark.classList.toggle("display");
+    bookmarkIcon.setAttribute("src", "images/icon-bookmark-green.svg");
+    document.querySelector(".bookmark__p").innerHTML = "Bookmarked";
+    document.querySelector(".bookmark__p").classList.toggle("display");
+
+    if (!bookmark.classList.contains("display")) {
+        console.log("no");
+        bookmarkIcon.setAttribute("src", "images/icon-bookmark.svg");
+        document.querySelector(".bookmark__p").innerHTML = "Bookmark";
+        document.querySelector(".bookmark__p").classList.remove("display");
+    }
 });

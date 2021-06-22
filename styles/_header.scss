@@ -7,6 +7,16 @@ header {
     display: flex;
     justify-content: center;
 
+    @include mobileSize {
+        height: 350px;
+        background: linear-gradient(
+                rgba(33, 33, 33, 0.5),
+                rgba(33, 33, 33, 0.05)
+            ),
+            url("../images/image-hero-mobile.jpg") no-repeat center;
+        background-size: cover;
+    }
+
     nav {
         // outline: solid red 2px;
         display: flex;

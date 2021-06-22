@@ -6,3 +6,9 @@ $boxShadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     justify-content: center;
     flex-direction: $direction;
 }
+
+@mixin mobileSize {
+    @media only screen and (max-width: 750px) {
+        @content;
+    }
+} ;

@@ -10,6 +10,11 @@
     display: none;
     flex-direction: column;
 
+    @include mobileSize {
+        width: initial;
+        margin: 1em;
+    }
+
     img {
         height: 15px;
         width: 15px;
@@ -112,6 +117,11 @@
                 }
             }
 
+            .header-4:hover {
+                color: initial;
+                cursor: initial;
+            }
+
             // this wraps the ammount of items left
             .ammount--wrap {
                 display: flex;
@@ -136,6 +146,10 @@
             justify-content: space-between;
             align-items: center;
 
+            @include mobileSize {
+                flex-direction: column;
+            }
+
             &.display {
                 display: flex;
             }
@@ -143,6 +157,10 @@
             .pledge__p {
                 color: color(neutral-darkGrey);
                 font-weight: 500;
+
+                @include mobileSize {
+                    margin-bottom: 1.5em;
+                }
             }
         }
 
