@@ -513,14 +513,12 @@ header nav .nav-content--wrap ul .link-margin {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 999px;
-  width: 100%;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 750px) {
@@ -734,7 +732,7 @@ header nav .nav-content--wrap ul .link-margin {
 
 .thank-you--container {
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;

@@ -11,8 +11,8 @@ let blackEditionAmountSmall = document.getElementById(
     "black-edition--amounnt-left-small"
 );
 
-bambooCounter = 101;
-blackEditionCounter = 64;
+let bambooCounter = 101;
+let blackEditionCounter = 64;
 
 let selectRewardBamboo = document.getElementById("select-Bamboo");
 let selectRewardBlackEdition = document.getElementById("select-BlackEdition");
@@ -47,6 +47,13 @@ const continue3 = document.getElementById("black-edition--continue");
 
 const header4 = document.querySelector(".header-4");
 
+//
+//
+//
+
+//
+//
+// Event listeners for the "back this project" button and the "X" button that closes the window
 callToActionBtn.addEventListener("click", openCloseProjectCard);
 callToActionBtn.addEventListener("click", scrollIntoView);
 xButton.addEventListener("click", openCloseProjectCard);
@@ -81,7 +88,24 @@ if (counter >= 100000) {
 //
 //
 //
+input1.value = null;
+input2.value = null;
+//
+//
 
+// this sets the innerHTML of the ammount of money raised on page load
+number.innerHTML = "$" + counter.toLocaleString();
+totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+// this sets the number left of things on page load
+bambooAmount.innerHTML = bambooCounter.toLocaleString();
+bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
+blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
+blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
+//
+//
+//
+// Functions
 function openCloseProjectCard() {
     radio1.checked = false;
     radio2.checked = false;
@@ -122,7 +146,7 @@ function continueThankYou() {
     blackEditionPledge.classList.remove("display");
 
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.classList.toggle("display");
+    // body.classList.toggle("display");
 
     scrollIntoView();
 }
@@ -213,22 +237,8 @@ headerClick(header3, false, false, true);
 //
 
 //
-//
-//
-input1.value = null;
-input2.value = null;
-
-// this sets the innerHTML of the ammount of money raised on page load
-number.innerHTML = "$" + counter.toLocaleString();
-totalBackers.innerHTML = totalBackersCounter.toLocaleString();
-
-// this sets the number left of things on page load
-bambooAmount.innerHTML = bambooCounter.toLocaleString();
-bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
-blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
-blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
-
 // continue buttons logic after a pledge is made
+//
 continue1.addEventListener("click", () => {
     totalBackersCounter += 1;
     totalBackers.innerHTML = totalBackersCounter.toLocaleString();
@@ -330,18 +340,23 @@ continue3.addEventListener("click", () => {
     input1.value = null;
     input2.value = null;
 });
-
+//
+// continue button event listener on the thank you pop up after a reward is selected
+//
 thankYouBtn.addEventListener("click", () => {
     document.querySelector(".thank-you--container").classList.toggle("display");
 
-    body.classList.toggle("display");
+    // body.classList.toggle("display");
     lightBox.classList.toggle("display");
 });
 
+//
+// select reward bamboo button
+//
 selectRewardBamboo.addEventListener("click", () => {
     lightBox.classList.toggle("display");
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.classList.toggle("display");
+    // body.classList.toggle("display");
 
     bambooCounter -= 1;
     bambooAmount.innerHTML = bambooCounter;
@@ -360,10 +375,13 @@ selectRewardBamboo.addEventListener("click", () => {
     scrollIntoView();
 });
 
+//
+// select reward black edition button
+//
 selectRewardBlackEdition.addEventListener("click", () => {
     lightBox.classList.toggle("display");
     document.querySelector(".thank-you--container").classList.toggle("display");
-    body.classList.toggle("display");
+    // body.classList.toggle("display");
 
     blackEditionCounter -= 1;
     blackEditionAmount.innerHTML = blackEditionCounter;
@@ -382,6 +400,9 @@ selectRewardBlackEdition.addEventListener("click", () => {
     scrollIntoView();
 });
 
+//
+// bookmark button event listener
+//
 bookmark.addEventListener("click", () => {
     bookmark.classList.toggle("display");
     bookmarkIcon.setAttribute("src", "images/icon-bookmark-green.svg");
@@ -395,6 +416,10 @@ bookmark.addEventListener("click", () => {
         document.querySelector(".bookmark__p").classList.remove("display");
     }
 });
+
+//
+// mobile navbar
+//
 
 hamburger.addEventListener("click", () => {
     document.querySelector(".ul--wrap").classList.toggle("display");
