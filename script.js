@@ -12,7 +12,6 @@ let radio2 = document.getElementById("radio-2");
 let radio3 = document.getElementById("radio-3");
 
 const radioButtons = document.querySelectorAll(".radio");
-const rewardH4 = document.querySelectorAll(".reward__h4");
 
 const number = document.querySelector(".number");
 const continue1 = document.getElementById("no-reward--continue");
@@ -32,38 +31,7 @@ callToActionBtn.addEventListener("click", openCloseProjectCard);
 callToActionBtn.addEventListener("click", scrollIntoView);
 xButton.addEventListener("click", openCloseProjectCard);
 
-function openCloseProjectCard() {
-    radio1.checked = false;
-    radio2.checked = false;
-    radio3.checked = false;
-    document.querySelector(".no-reward-pledge").style.border =
-        "solid rgba(161, 161, 161, 0.295) 2px;";
-
-    backThisProjectCard.classList.toggle("display");
-    lightBox.classList.toggle("display");
-    body.classList.toggle("display");
-
-    document.querySelector(".no-reward-pledge").classList.remove("display");
-
-    document
-        .querySelector(".no-reward__enter-pledge")
-        .classList.remove("display");
-
-    document
-        .querySelector(".bamboo-stand__enter-pledge")
-        .classList.remove("display");
-    document.querySelector(".bamboo-stand").classList.remove("display");
-
-    document.querySelector(".black-edition").classList.remove("display");
-    document
-        .querySelector(".black-edition__enter-pledge")
-        .classList.remove("display");
-}
-
-function scrollIntoView() {
-    scroll(0, 0);
-}
-
+// setting base conditions
 radio1.checked = false;
 radio2.checked = false;
 radio3.checked = false;
@@ -90,181 +58,132 @@ if (counter >= 100000) {
 } else if (counter >= 10000) {
     meter.style.width = "10%";
 }
-// radio1.addEventListener("click", () => {
-//     if (radio1.checked == true) {
-//         document.querySelector(".no-reward-pledge").style.border =
-//             "solid hsl(176, 72%, 28%) 2px";
-//     } else {
-//         document.querySelector(".no-reward-pledge").style.border =
-//             "solid rgba(161, 161, 161, 0.295) 2px";
-//     }
-// });
+//
+//
+//
 
-// radio2.addEventListener("click", () => {
-//     document.querySelector(".enter-pledge").classList.add("display");
-
-//     if (!radio2.checked) {
-//         document.querySelector(".enter-pledge").classList.remove("display");
-//     }
-// });
-
-header1.addEventListener("click", () => {
-    radio1.checked = true;
+function openCloseProjectCard() {
+    radio1.checked = false;
     radio2.checked = false;
     radio3.checked = false;
 
-    document
-        .querySelector(".bamboo-stand__enter-pledge")
-        .classList.remove("display");
-    document.querySelector(".bamboo-stand").classList.remove("display");
+    backThisProjectCard.classList.toggle("display");
+    lightBox.classList.toggle("display");
+    body.classList.toggle("display");
 
-    document.querySelector(".black-edition").classList.remove("display");
-    document
-        .querySelector(".black-edition__enter-pledge")
-        .classList.remove("display");
+    noReward.classList.remove("display");
+    noRewardPledge.classList.remove("display");
 
-    if (radio1.checked) {
-        document.querySelector(".no-reward-pledge").classList.add("display");
+    bambooPledge.classList.remove("display");
+    bambooBorder.classList.remove("display");
 
-        document
-            .querySelector(".no-reward__enter-pledge")
-            .classList.add("display");
-    } else {
-        document.querySelector(".no-reward-pledge").classList.remove("display");
-
-        document
-            .querySelector(".no-reward__enter-pledge")
-            .classList.remove("display");
-    }
-});
-
-header2.addEventListener("click", () => {
-    radio2.checked = true;
-    radio1.checked = false;
-    radio3.checked = false;
-
-    document.querySelector(".no-reward-pledge").classList.remove("display");
-    document
-        .querySelector(".no-reward__enter-pledge")
-        .classList.remove("display");
-
-    document.querySelector(".black-edition").classList.remove("display");
-    document
-        .querySelector(".black-edition__enter-pledge")
-        .classList.remove("display");
-
-    if (radio2.checked) {
-        document
-            .querySelector(".bamboo-stand__enter-pledge")
-            .classList.add("display");
-        document.querySelector(".bamboo-stand").classList.add("display");
-    } else {
-        document
-            .querySelector(".bamboo-stand__enter-pledge")
-            .classList.remove("display");
-        document.querySelector(".bamboo-stand").classList.remove("display");
-    }
-});
-
-header3.addEventListener("click", () => {
-    radio1.checked = false;
-    radio2.checked = false;
-    radio3.checked = true;
-
-    document.querySelector(".no-reward-pledge").classList.remove("display");
-
-    document
-        .querySelector(".no-reward__enter-pledge")
-        .classList.remove("display");
-
-    document
-        .querySelector(".bamboo-stand__enter-pledge")
-        .classList.remove("display");
-    document.querySelector(".bamboo-stand").classList.remove("display");
-
-    if (radio3.checked) {
-        document
-            .querySelector(".black-edition__enter-pledge")
-            .classList.add("display");
-        document.querySelector(".black-edition").classList.add("display");
-    } else {
-        document.querySelector(".black-edition").classList.remove("display");
-        document
-            .querySelector(".black-edition__enter-pledge")
-            .classList.remove("display");
-    }
-});
-
-//
-//
-//
-function radioSelect() {
-    if (radio1.checked) {
-        document.querySelector(".no-reward-pledge").classList.add("display");
-
-        document
-            .querySelector(".no-reward__enter-pledge")
-            .classList.add("display");
-    } else {
-        document.querySelector(".no-reward-pledge").classList.remove("display");
-
-        document
-            .querySelector(".no-reward__enter-pledge")
-            .classList.remove("display");
-    }
-
-    if (radio2.checked) {
-        document
-            .querySelector(".bamboo-stand__enter-pledge")
-            .classList.add("display");
-        document.querySelector(".bamboo-stand").classList.add("display");
-    } else {
-        document
-            .querySelector(".bamboo-stand__enter-pledge")
-            .classList.remove("display");
-        document.querySelector(".bamboo-stand").classList.remove("display");
-    }
-
-    if (radio3.checked) {
-        document
-            .querySelector(".black-edition__enter-pledge")
-            .classList.add("display");
-        document.querySelector(".black-edition").classList.add("display");
-    } else {
-        document.querySelector(".black-edition").classList.remove("display");
-        document
-            .querySelector(".black-edition__enter-pledge")
-            .classList.remove("display");
-    }
+    blackEdition.classList.remove("display");
+    blackEditionPledge.classList.remove("display");
 }
 
-for (let i = 0; i < radioButtons.length; i++) {
-    radioButtons[i].addEventListener("click", radioSelect);
+function scrollIntoView() {
+    scroll(0, 0);
 }
 
-// rewardH4.forEach((h4) => {
-//     h4.addEventListener("click", () => {
+//
+//
+//
+let noReward = document.querySelector(".no-reward-pledge");
+let noRewardPledge = document.querySelector(".no-reward__enter-pledge");
+let bambooPledge = document.querySelector(".bamboo-stand__enter-pledge");
+let bambooBorder = document.querySelector(".bamboo-stand");
+let blackEdition = document.querySelector(".black-edition");
+let blackEditionPledge = document.querySelector(".black-edition__enter-pledge");
 
-//     });
-// });
+function headerClick(header, boolean1, boolean2, boolean3) {
+    header.addEventListener("click", () => {
+        radio1.checked = boolean1;
+        radio2.checked = boolean2;
+        radio3.checked = boolean3;
 
+        if (radio1.checked) {
+            noReward.classList.add("display");
+            noRewardPledge.classList.add("display");
+        } else {
+            noReward.classList.remove("display");
+            noRewardPledge.classList.remove("display");
+        }
+
+        if (radio2.checked) {
+            bambooPledge.classList.add("display");
+            bambooBorder.classList.add("display");
+        } else {
+            bambooPledge.classList.remove("display");
+            bambooBorder.classList.remove("display");
+        }
+
+        if (radio3.checked) {
+            blackEditionPledge.classList.add("display");
+            blackEdition.classList.add("display");
+        } else {
+            blackEdition.classList.remove("display");
+            blackEditionPledge.classList.remove("display");
+        }
+
+        // this is the same logic as above but for the radio buttons on click instead of the header
+        for (let i = 0; i < radioButtons.length; i++) {
+            radioButtons[i].addEventListener("click", () => {
+                if (radio1.checked) {
+                    noReward.classList.add("display");
+                    noRewardPledge.classList.add("display");
+                } else {
+                    noReward.classList.remove("display");
+                    noRewardPledge.classList.remove("display");
+                }
+
+                if (radio2.checked) {
+                    bambooPledge.classList.add("display");
+                    bambooBorder.classList.add("display");
+                } else {
+                    bambooPledge.classList.remove("display");
+                    bambooBorder.classList.remove("display");
+                }
+
+                if (radio3.checked) {
+                    blackEditionPledge.classList.add("display");
+                    blackEdition.classList.add("display");
+                } else {
+                    blackEdition.classList.remove("display");
+                    blackEditionPledge.classList.remove("display");
+                }
+            });
+        }
+    });
+}
+
+headerClick(header1, true, false, false);
+headerClick(header2, false, true, false);
+headerClick(header3, false, false, true);
+//
+//
+//
+
+//
+//
+//
 input1.value = "";
 input2.value = "";
 
 number.innerHTML = counter.toLocaleString();
 
-continue1.addEventListener("click", () => {
-    backThisProjectCard.classList.toggle("display");
-    lightBox.classList.toggle("display");
-    body.classList.toggle("display");
-});
+// continue buttons logic after a pledge is made
+continue1.addEventListener("click", openCloseProjectCard);
 
 continue2.addEventListener("click", () => {
+    // check if the input value is less than $25
     if (input1.value < 25) {
-        alert("error");
+        return alert("error");
     }
 
+    // convert the string value to a number and add it to the counter variable
     counter += parseInt(input1.value);
+
+    // turn the counter variable into a string with commas and insert it into the HTML
     number.innerHTML = counter.toLocaleString();
 
     if (counter >= 100000) {
@@ -290,17 +209,17 @@ continue2.addEventListener("click", () => {
         meter.style.width = "10%";
     }
 
-    backThisProjectCard.classList.toggle("display");
-    lightBox.classList.toggle("display");
-    body.classList.toggle("display");
+    // close the popup
+    openCloseProjectCard();
 
-    input1.value = "";
-    input2.value = "";
+    // reset the inner values of the inputs to blank
+    input1.value = null;
+    input2.value = null;
 });
 
 continue3.addEventListener("click", () => {
     if (input2.value < 75) {
-        alert("error");
+        return alert("error");
     }
 
     counter += parseInt(input2.value);
@@ -329,11 +248,8 @@ continue3.addEventListener("click", () => {
         meter.style.width = "10%";
     }
 
-    console.log("not working");
-    backThisProjectCard.classList.toggle("display");
-    lightBox.classList.toggle("display");
-    body.classList.toggle("display");
+    openCloseProjectCard();
 
-    input1.value = "";
-    input2.value = "";
+    input1.value = null;
+    input2.value = null;
 });
