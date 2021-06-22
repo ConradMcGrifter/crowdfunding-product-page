@@ -11,8 +11,8 @@
     flex-direction: column;
 
     @include mobileSize {
-        width: auto;
-        margin: 1em;
+        width: 90%;
+
         top: 100px;
         padding: 1em;
     }

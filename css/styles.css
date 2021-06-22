@@ -16,8 +16,7 @@
 
 @media only screen and (max-width: 750px) {
   #back-this-project-card {
-    width: auto;
-    margin: 1em;
+    width: 90%;
     top: 100px;
     padding: 1em;
   }
