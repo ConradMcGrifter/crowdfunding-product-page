@@ -72,14 +72,14 @@
                 <div class="status-info--wrap">
                     <div class="status-info">
                         <div class="status-info-content--wrap">
-                            <h2 class="number"></h2>
+                            <h2 class="number">0</h2>
                             <p class="info">of $100,000 backed</p>
                         </div>
                     </div>
                     <hr />
                     <div class="status-info">
                         <div class="status-info-content--wrap">
-                            <h2 class="number">5,007</h2>
+                            <h2 class="number total-backers">0</h2>
                             <p class="info">total backers</p>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                     </p>
                     <div class="rewards__content--wrap">
                         <div class="number-left--wrap">
-                            <h2 class="rewards__h3">101</h3>
+                            <h2 class="rewards__h3" id="bamboo-stand--ammount-left">101</h3>
                             <span class="left">left</span>
                         </div>
                         <button class="reward-btn">Select Reward</button>
@@ -150,7 +150,7 @@
                     </p>
                     <div class="rewards__content--wrap">
                         <div class="number-left--wrap">
-                            <h2 class="rewards__h3">64</h2>
+                            <h2 class="rewards__h3" id="black-edition--amount-left">64</h2>
                             <span class="left">left</span>
                         </div>
                         <button class="reward-btn">Select Reward</button>
@@ -236,7 +236,7 @@
                                 <span> Pledge $25 or more</span>
                             </h4>
                             <div class="ammount--wrap">
-                                <h4>101</h4>
+                                <h4 id="bamboo-stand--amount-left-small">101</h4>
                                 <small>left</small>
                             </div>
                         
@@ -268,7 +268,7 @@
                                 <span> Pledge $75 or more</span>
                             </h4>
                             <div class="ammount--wrap">
-                                <h4>64</h4>
+                                <h4 id="black-edition--amounnt-left-small">64</h4>
                                 <small>left</small>
                             </div>
                         
@@ -322,8 +322,21 @@
             </div>
 
         </div>
-        <section id="lightbox"></section>  
+
+        <div class="thank-you--container">
+            <div class="thank-you--wrap">
+                <img src="images/icon-check.svg" alt="" class="thank-you-checkmark">
+                <h2 class="thank-you__h2">Thanks for your support!</h2>
+                <p class="thank-you__p">Your pledge brings us one step closer to
+                sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
+                email once our campaign is completed.</p>
+                <button class="thank-you__button">Got it!</button>
+            </div>
             
+        </div>
+        <section id="lightbox"></section>  
+        
+       
          
 
         <!-- Selection modal start -->
@@ -351,9 +364,7 @@
 
         <!-- Success modal start -->
 
-        <!-- Thanks for your support! Your pledge brings us one step closer to
-        sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
-        email once our campaign is completed. Got it! -->
+        <!--   Got it! -->
 
         <!-- Success modal end -->
         <script src="script.js"></script>

@@ -1,0 +1,48 @@
+.thank-you--container {
+    // background: rgba(33, 33, 33, 0.5);
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include flexCenter();
+    display: none;
+
+    &.display {
+        display: flex;
+    }
+}
+
+.thank-you--wrap {
+    // outline: solid red 2px;
+    background: white;
+    width: 25%;
+    @include flexCenter(column);
+    text-align: center;
+    padding: 2em;
+
+    .thank-you__button {
+        margin-top: 2em;
+        border-radius: 999px;
+        border: none;
+        color: white;
+        padding: 1em 2em;
+        background: color(primary-light);
+        cursor: pointer;
+
+        &:hover {
+            background: color(primary-dark);
+        }
+    }
+
+    .thank-you__p {
+        line-height: 1.6;
+    }
+
+    .thank-you__h2 {
+        margin: 1em 0;
+    }
+}

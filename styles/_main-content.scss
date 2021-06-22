@@ -39,7 +39,7 @@
             margin: auto;
 
             #call-to-action__btn {
-                background: color(primary-dark);
+                background: color(primary-light);
                 color: white;
                 width: 100%;
                 max-width: 175px;
@@ -49,6 +49,10 @@
                 font-weight: 400;
                 font-size: 1.5rem;
                 cursor: pointer;
+
+                &:hover {
+                    background: color(primary-dark);
+                }
             }
 
             .bookmarked {
@@ -158,6 +162,10 @@
             font-weight: 400;
             font-size: 1.5rem;
             cursor: pointer;
+
+            &:hover {
+                background: color(primary-dark);
+            }
         }
 
         .number-left--wrap {

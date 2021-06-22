@@ -167,13 +167,17 @@
 }
 
 #back-this-project-card .reward .input--wrap .continue {
-  background: #147b74;
+  background: #3cb4ac;
   border: none;
   padding: 1em 1.5em;
   border-radius: 999px;
   color: white;
   margin-left: 0.5em;
   cursor: pointer;
+}
+
+#back-this-project-card .reward .input--wrap .continue:hover {
+  background: #147b74;
 }
 
 #back-this-project-card .reward .input--wrap input {
@@ -325,7 +329,7 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .status .button-and-bookmark--wrap #call-to-action__btn, .content--wrap .rewards-section .button-and-bookmark--wrap #call-to-action__btn {
-  background: #147b74;
+  background: #3cb4ac;
   color: white;
   width: 100%;
   max-width: 175px;
@@ -335,6 +339,10 @@ header nav .nav-content--wrap ul .link-margin {
   font-weight: 400;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.content--wrap .call-to-action .button-and-bookmark--wrap #call-to-action__btn:hover, .content--wrap .status .button-and-bookmark--wrap #call-to-action__btn:hover, .content--wrap .rewards-section .button-and-bookmark--wrap #call-to-action__btn:hover {
+  background: #147b74;
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked, .content--wrap .status .button-and-bookmark--wrap .bookmarked, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked {
@@ -467,6 +475,10 @@ header nav .nav-content--wrap ul .link-margin {
   cursor: pointer;
 }
 
+.content--wrap .rewards-section .reward-btn:hover {
+  background: #147b74;
+}
+
 .content--wrap .rewards-section .number-left--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,6 +494,78 @@ header nav .nav-content--wrap ul .link-margin {
 
 .content--wrap .rewards-section .rewards--out-of-stock .reward-btn--out-of-stock {
   background: gray;
+}
+
+.thank-you--container {
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: none;
+}
+
+.thank-you--container.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thank-you--wrap {
+  background: white;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 2em;
+}
+
+.thank-you--wrap .thank-you__button {
+  margin-top: 2em;
+  border-radius: 999px;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  background: #3cb4ac;
+  cursor: pointer;
+}
+
+.thank-you--wrap .thank-you__button:hover {
+  background: #147b74;
+}
+
+.thank-you--wrap .thank-you__p {
+  line-height: 1.6;
+}
+
+.thank-you--wrap .thank-you__h2 {
+  margin: 1em 0;
 }
 
 html {

@@ -1,6 +1,21 @@
 let counter = 89914;
+let totalBackersCounter = 5007;
+let totalBackers = document.querySelector(".total-backers");
+
+let bambooAmount = document.getElementById("bamboo-stand--ammount-left");
+let blackEditionAmount = document.getElementById("black-edition--amount-left");
+let bambooAmountSmall = document.getElementById(
+    "bamboo-stand--amount-left-small"
+);
+let blackEditionAmountSmall = document.getElementById(
+    "black-edition--amounnt-left-small"
+);
+
+bambooCounter = 101;
+blackEditionCounter = 64;
 
 let callToActionBtn = document.getElementById("call-to-action__btn");
+let thankYouBtn = document.querySelector(".thank-you__button");
 let backThisProjectCard = document.getElementById("back-this-project-card");
 let lightBox = document.getElementById("lightbox");
 let body = document.querySelector("body");
@@ -67,9 +82,11 @@ function openCloseProjectCard() {
     radio2.checked = false;
     radio3.checked = false;
 
+    body.style.overflow = "visible";
+
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
-    body.classList.toggle("display");
+    // body.classList.toggle("display");
 
     noReward.classList.remove("display");
     noRewardPledge.classList.remove("display");
@@ -79,6 +96,30 @@ function openCloseProjectCard() {
 
     blackEdition.classList.remove("display");
     blackEditionPledge.classList.remove("display");
+}
+
+function continueThankYou() {
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = false;
+
+    backThisProjectCard.classList.toggle("display");
+    // lightBox.classList.toggle("display");
+    // body.classList.toggle("display");
+
+    noReward.classList.remove("display");
+    noRewardPledge.classList.remove("display");
+
+    bambooPledge.classList.remove("display");
+    bambooBorder.classList.remove("display");
+
+    blackEdition.classList.remove("display");
+    blackEditionPledge.classList.remove("display");
+
+    document.querySelector(".thank-you--container").classList.toggle("display");
+    body.style.overflow = "hidden";
+
+    scrollIntoView();
 }
 
 function scrollIntoView() {
@@ -100,6 +141,8 @@ function headerClick(header, boolean1, boolean2, boolean3) {
         radio1.checked = boolean1;
         radio2.checked = boolean2;
         radio3.checked = boolean3;
+
+        radioButtonClick();
 
         if (radio1.checked) {
             noReward.classList.add("display");
@@ -124,36 +167,37 @@ function headerClick(header, boolean1, boolean2, boolean3) {
             blackEdition.classList.remove("display");
             blackEditionPledge.classList.remove("display");
         }
-
-        // this is the same logic as above but for the radio buttons on click instead of the header
-        for (let i = 0; i < radioButtons.length; i++) {
-            radioButtons[i].addEventListener("click", () => {
-                if (radio1.checked) {
-                    noReward.classList.add("display");
-                    noRewardPledge.classList.add("display");
-                } else {
-                    noReward.classList.remove("display");
-                    noRewardPledge.classList.remove("display");
-                }
-
-                if (radio2.checked) {
-                    bambooPledge.classList.add("display");
-                    bambooBorder.classList.add("display");
-                } else {
-                    bambooPledge.classList.remove("display");
-                    bambooBorder.classList.remove("display");
-                }
-
-                if (radio3.checked) {
-                    blackEditionPledge.classList.add("display");
-                    blackEdition.classList.add("display");
-                } else {
-                    blackEdition.classList.remove("display");
-                    blackEditionPledge.classList.remove("display");
-                }
-            });
-        }
     });
+}
+// this is the same logic as above but for the radio buttons on click instead of the header
+for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].addEventListener("click", radioButtonClick);
+}
+
+function radioButtonClick() {
+    if (radio1.checked) {
+        noReward.classList.add("display");
+        noRewardPledge.classList.add("display");
+    } else {
+        noReward.classList.remove("display");
+        noRewardPledge.classList.remove("display");
+    }
+
+    if (radio2.checked) {
+        bambooPledge.classList.add("display");
+        bambooBorder.classList.add("display");
+    } else {
+        bambooPledge.classList.remove("display");
+        bambooBorder.classList.remove("display");
+    }
+
+    if (radio3.checked) {
+        blackEditionPledge.classList.add("display");
+        blackEdition.classList.add("display");
+    } else {
+        blackEdition.classList.remove("display");
+        blackEditionPledge.classList.remove("display");
+    }
 }
 
 headerClick(header1, true, false, false);
@@ -166,18 +210,25 @@ headerClick(header3, false, false, true);
 //
 //
 //
-input1.value = "";
-input2.value = "";
+input1.value = null;
+input2.value = null;
 
-number.innerHTML = counter.toLocaleString();
+// this sets the innerHTML of the ammount of money raised on page load
+number.innerHTML = "$" + counter.toLocaleString();
+totalBackers.innerHTML = totalBackersCounter.toLocaleString();
 
 // continue buttons logic after a pledge is made
-continue1.addEventListener("click", openCloseProjectCard);
+continue1.addEventListener("click", () => {
+    totalBackersCounter += 1;
+    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    continueThankYou();
+});
 
 continue2.addEventListener("click", () => {
     // check if the input value is less than $25
     if (input1.value < 25) {
-        return alert("error");
+        return alert("Please enter the minimum ammount");
     }
 
     // convert the string value to a number and add it to the counter variable
@@ -185,6 +236,14 @@ continue2.addEventListener("click", () => {
 
     // turn the counter variable into a string with commas and insert it into the HTML
     number.innerHTML = counter.toLocaleString();
+
+    // increase the number of total backers
+    totalBackersCounter += 1;
+    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    bambooCounter -= 1;
+    bambooAmount.innerHTML = bambooCounter.toLocaleString();
+    bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
 
     if (counter >= 100000) {
         meter.style.width = "100%";
@@ -210,7 +269,7 @@ continue2.addEventListener("click", () => {
     }
 
     // close the popup
-    openCloseProjectCard();
+    continueThankYou();
 
     // reset the inner values of the inputs to blank
     input1.value = null;
@@ -224,6 +283,13 @@ continue3.addEventListener("click", () => {
 
     counter += parseInt(input2.value);
     number.innerHTML = counter.toLocaleString();
+
+    totalBackersCounter += 1;
+    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    blackEditionCounter -= 1;
+    blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
+    blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
 
     if (counter >= 100000) {
         meter.style.width = "100%";
@@ -248,8 +314,15 @@ continue3.addEventListener("click", () => {
         meter.style.width = "10%";
     }
 
-    openCloseProjectCard();
+    continueThankYou();
 
     input1.value = null;
     input2.value = null;
+});
+
+thankYouBtn.addEventListener("click", () => {
+    document.querySelector(".thank-you--container").classList.toggle("display");
+
+    body.style.overflow = "visible";
+    lightBox.classList.toggle("display");
 });
