@@ -246,7 +246,7 @@ continue2.addEventListener("click", () => {
     counter += parseInt(input1.value);
 
     // turn the counter variable into a string with commas and insert it into the HTML
-    number.innerHTML = counter.toLocaleString();
+    number.innerHTML = "$" + counter.toLocaleString();
 
     // increase the number of total backers
     totalBackersCounter += 1;
@@ -293,7 +293,7 @@ continue3.addEventListener("click", () => {
     }
 
     counter += parseInt(input2.value);
-    number.innerHTML = counter.toLocaleString();
+    number.innerHTML = "$" + counter.toLocaleString();
 
     totalBackersCounter += 1;
     totalBackers.innerHTML = totalBackersCounter.toLocaleString();
@@ -354,7 +354,7 @@ selectRewardBamboo.addEventListener("click", () => {
     if (counter >= 100000) {
         number.innerHTML = "Goal met!";
     } else {
-        number.innerHTML = counter.toLocaleString();
+        number.innerHTML = "$" + counter.toLocaleString();
     }
 
     scrollIntoView();
@@ -376,7 +376,7 @@ selectRewardBlackEdition.addEventListener("click", () => {
     if (counter >= 100000) {
         number.innerHTML = "Goal met!";
     } else {
-        number.innerHTML = counter.toLocaleString();
+        number.innerHTML = "$" + counter.toLocaleString();
     }
 
     scrollIntoView();
