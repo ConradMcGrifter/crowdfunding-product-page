@@ -11,9 +11,10 @@
     flex-direction: column;
 
     @include mobileSize {
-        width: initial;
+        width: auto;
         margin: 1em;
         top: 100px;
+        padding: 1em;
     }
 
     img {
@@ -107,6 +108,10 @@
 
             justify-content: space-between;
 
+            @include mobileSize {
+                flex-direction: column;
+            }
+
             h4 {
                 &:hover {
                     color: color(primary-light);
@@ -127,6 +132,10 @@
             .ammount--wrap {
                 display: flex;
                 align-items: center;
+
+                @include mobileSize {
+                    margin-top: 0.5em;
+                }
 
                 h4 {
                     margin-right: 0.25em;

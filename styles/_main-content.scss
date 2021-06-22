@@ -50,7 +50,7 @@
                 padding: 0.15em 1em;
                 border: none;
                 border-radius: 999px;
-                font-weight: 400;
+                font-weight: 700;
                 font-size: 1.5rem;
                 cursor: pointer;
 
@@ -61,7 +61,7 @@
 
             .bookmarked {
                 display: flex;
-                background: color(neutral-darkGrey);
+                background: rgba(128, 128, 128, 0.281);
                 align-items: center;
                 justify-content: center;
                 border-radius: 999px;
@@ -83,9 +83,11 @@
                 }
 
                 p {
-                    color: white;
+                    color: color(neutral-darkGrey);
+                    font-weight: 700;
                     margin: auto;
                     padding: 0 1.5em;
+                    font-size: 1.5rem;
 
                     @include mobileSize {
                         display: none;
@@ -160,6 +162,10 @@
     .rewards-section {
         @extend .status;
 
+        @include mobileSize {
+            padding: 1.5em;
+        }
+
         p {
             line-height: 2;
             margin: 2em 0;
@@ -170,6 +176,10 @@
             border: solid rgba(161, 161, 161, 0.295) 2px;
             border-radius: 10px;
             margin-top: 1.5em;
+
+            @include mobileSize {
+                padding: 1em;
+            }
         }
 
         .rewards__content--wrap {
@@ -203,7 +213,7 @@
             padding: 1em;
             border: none;
             border-radius: 999px;
-            font-weight: 400;
+            font-weight: 700;
             font-size: 1.5rem;
             cursor: pointer;
 

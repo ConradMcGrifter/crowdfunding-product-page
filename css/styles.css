@@ -16,9 +16,10 @@
 
 @media only screen and (max-width: 750px) {
   #back-this-project-card {
-    width: initial;
+    width: auto;
     margin: 1em;
     top: 100px;
+    padding: 1em;
   }
 }
 
@@ -105,6 +106,15 @@
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 750px) {
+  #back-this-project-card .reward .reward__info-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #back-this-project-card .reward .reward__info-header h4:hover {
   color: #3cb4ac;
   cursor: pointer;
@@ -127,6 +137,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+  #back-this-project-card .reward .reward__info-header .ammount--wrap {
+    margin-top: 0.5em;
+  }
 }
 
 #back-this-project-card .reward .reward__info-header .ammount--wrap h4 {
@@ -476,7 +492,7 @@ header nav .nav-content--wrap ul .link-margin {
   padding: 0.15em 1em;
   border: none;
   border-radius: 999px;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -489,7 +505,7 @@ header nav .nav-content--wrap ul .link-margin {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #7a7a7a;
+  background: rgba(128, 128, 128, 0.281);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -522,9 +538,11 @@ header nav .nav-content--wrap ul .link-margin {
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap .bookmarked p, .content--wrap .status .button-and-bookmark--wrap .bookmarked p, .content--wrap .rewards-section .button-and-bookmark--wrap .bookmarked p {
-  color: white;
+  color: #7a7a7a;
+  font-weight: 700;
   margin: auto;
   padding: 0 1.5em;
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -617,6 +635,12 @@ header nav .nav-content--wrap ul .link-margin {
   border-radius: 999px;
 }
 
+@media only screen and (max-width: 750px) {
+  .content--wrap .rewards-section {
+    padding: 1.5em;
+  }
+}
+
 .content--wrap .rewards-section p {
   line-height: 2;
   margin: 2em 0;
@@ -627,6 +651,12 @@ header nav .nav-content--wrap ul .link-margin {
   border: solid rgba(161, 161, 161, 0.295) 2px;
   border-radius: 10px;
   margin-top: 1.5em;
+}
+
+@media only screen and (max-width: 750px) {
+  .content--wrap .rewards-section .rewards {
+    padding: 1em;
+  }
 }
 
 .content--wrap .rewards-section .rewards__content--wrap {
@@ -670,7 +700,7 @@ header nav .nav-content--wrap ul .link-margin {
   padding: 1em;
   border: none;
   border-radius: 999px;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -800,7 +830,7 @@ html {
 }
 
 body {
-  background: #fffbf7;
+  background: #fdfdfd;
   margin: 0;
   font-size: 1.6rem;
   font-family: "Commissioner", sans-serif;
