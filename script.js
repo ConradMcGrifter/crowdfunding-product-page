@@ -354,48 +354,90 @@ thankYouBtn.addEventListener("click", () => {
 // select reward bamboo button
 //
 selectRewardBamboo.addEventListener("click", () => {
-    lightBox.classList.toggle("display");
-    document.querySelector(".thank-you--container").classList.toggle("display");
+    // lightBox.classList.toggle("display");
+    // document.querySelector(".thank-you--container").classList.toggle("display");
     // body.classList.toggle("display");
 
-    bambooCounter -= 1;
-    bambooAmount.innerHTML = bambooCounter;
-    bambooAmountSmall.innerHTML = bambooCounter;
+    // bambooCounter -= 1;
+    // bambooAmount.innerHTML = bambooCounter;
+    // bambooAmountSmall.innerHTML = bambooCounter;
 
-    totalBackersCounter += 1;
-    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+    // totalBackersCounter += 1;
+    // totalBackers.innerHTML = totalBackersCounter.toLocaleString();
 
-    counter += 25;
-    if (counter >= 100000) {
-        number.innerHTML = "Goal met!";
-    } else {
-        number.innerHTML = "$" + counter.toLocaleString();
-    }
+    // counter += 25;
+    // if (counter >= 100000) {
+    //     number.innerHTML = "Goal met!";
+    // } else {
+    //     number.innerHTML = "$" + counter.toLocaleString();
+    // }
 
+    radio1.checked = false;
+    radio2.checked = true;
+    radio3.checked = false;
+
+    // body.style.overflow = "visible";
+
+    backThisProjectCard.classList.toggle("display");
+    lightBox.classList.toggle("display");
+    // body.classList.toggle("display");
+
+    noReward.classList.remove("display");
+    noRewardPledge.classList.remove("display");
+
+    bambooPledge.classList.remove("display");
+    bambooBorder.classList.remove("display");
+
+    blackEdition.classList.remove("display");
+    blackEditionPledge.classList.remove("display");
     scrollIntoView();
+
+    radioButtonClick();
 });
 
 //
 // select reward black edition button
 //
 selectRewardBlackEdition.addEventListener("click", () => {
+    // lightBox.classList.toggle("display");
+    // document.querySelector(".thank-you--container").classList.toggle("display");
+    // // body.classList.toggle("display");
+
+    // blackEditionCounter -= 1;
+    // blackEditionAmount.innerHTML = blackEditionCounter;
+    // blackEditionAmountSmall.innerHTML = blackEditionCounter;
+
+    // totalBackersCounter += 1;
+    // totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+
+    // counter += 75;
+    // if (counter >= 100000) {
+    //     number.innerHTML = "Goal met!";
+    // } else {
+    //     number.innerHTML = "$" + counter.toLocaleString();
+    // }
+
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = true;
+
+    // body.style.overflow = "visible";
+
+    backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
-    document.querySelector(".thank-you--container").classList.toggle("display");
     // body.classList.toggle("display");
 
-    blackEditionCounter -= 1;
-    blackEditionAmount.innerHTML = blackEditionCounter;
-    blackEditionAmountSmall.innerHTML = blackEditionCounter;
+    noReward.classList.remove("display");
+    noRewardPledge.classList.remove("display");
 
-    totalBackersCounter += 1;
-    totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+    bambooPledge.classList.remove("display");
+    bambooBorder.classList.remove("display");
 
-    counter += 75;
-    if (counter >= 100000) {
-        number.innerHTML = "Goal met!";
-    } else {
-        number.innerHTML = "$" + counter.toLocaleString();
-    }
+    blackEdition.classList.remove("display");
+    blackEditionPledge.classList.remove("display");
+    scrollIntoView();
+
+    radioButtonClick();
 
     scrollIntoView();
 });

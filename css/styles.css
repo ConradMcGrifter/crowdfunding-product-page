@@ -1,11 +1,11 @@
 #back-this-project-card {
   border-radius: 10px;
   background: white;
-  max-width: 650px;
+  max-width: 700px;
   width: 100%;
   padding: 2em;
   position: absolute;
-  top: 150px;
+  top: 5em;
   z-index: 999;
   display: none;
   -webkit-box-orient: vertical;
@@ -23,12 +23,21 @@
 }
 
 #back-this-project-card img {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   position: absolute;
   right: 25px;
   top: 25px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  #back-this-project-card img {
+    top: 10px;
+    right: 10px;
+    height: 15px;
+    width: 15px;
+  }
 }
 
 #back-this-project-card p {
@@ -217,6 +226,10 @@
   color: white;
   margin-left: 0.5em;
   cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: "Commissioner", sans-serif;
 }
 
 #back-this-project-card .reward .input--wrap .continue:hover {
@@ -261,10 +274,10 @@
 }
 
 header {
-  height: 500px;
+  height: 450px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-desktop.jpg") no-repeat center;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-desktop.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 33, 33, 0.5)), to(rgba(33, 33, 33, 0.05))), url("../images/image-hero-desktop.jpg") no-repeat bottom;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.05)), url("../images/image-hero-desktop.jpg") no-repeat bottom;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +444,7 @@ header nav .nav-content--wrap ul .link-margin {
 
 .content--wrap {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   position: relative;
   top: -100px;
 }
@@ -464,11 +477,13 @@ header nav .nav-content--wrap ul .link-margin {
   font-weight: 700;
   margin: 0 0 0.5em 0;
   padding: 1em 0 0 0;
+  font-size: 2.5rem;
 }
 
 .content--wrap .call-to-action p, .content--wrap .status p, .content--wrap .rewards-section p {
   color: #7a7a7a;
   font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .content--wrap .call-to-action .button-and-bookmark--wrap, .content--wrap .status .button-and-bookmark--wrap, .content--wrap .rewards-section .button-and-bookmark--wrap {
@@ -538,7 +553,7 @@ header nav .nav-content--wrap ul .link-margin {
   color: #7a7a7a;
   font-weight: 700;
   margin: auto;
-  padding: 0 1.5em;
+  padding: 0 1.5em 0 1em;
   font-size: 1.5rem;
 }
 
@@ -791,12 +806,17 @@ header nav .nav-content--wrap ul .link-margin {
 
 .thank-you--wrap .thank-you__button {
   margin-top: 2em;
-  border-radius: 999px;
-  border: none;
-  color: white;
-  padding: 1em 2em;
   background: #3cb4ac;
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 999px;
+  color: white;
+  margin-left: 0.5em;
   cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: "Commissioner", sans-serif;
 }
 
 .thank-you--wrap .thank-you__button:hover {
