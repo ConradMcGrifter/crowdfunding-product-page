@@ -31,6 +31,10 @@ function openCloseProjectCard() {
 
     blackEdition.classList.remove("display");
     blackEditionPledge.classList.remove("display");
+
+    // reset the input fields to blank
+    document.getElementById("input-ammount-1").value = null;
+    document.getElementById("input-ammount-2").value = null;
 }
 
 function continueThankYou() {
@@ -93,6 +97,35 @@ function radioButtonClick() {
     }
 }
 
+function progressBar(counterVar, meterEle, numberVar) {
+    if (counterVar >= 100000) {
+        meterEle.style.width = "100%";
+        numberVar.innerHTML = "Goal met!";
+    } else if (counterVar >= 95000) {
+        meterEle.style.width = "95%";
+    } else if (counterVar >= 90000) {
+        meterEle.style.width = "90%";
+    } else if (counterVar >= 85000) {
+        meterEle.style.width = "85";
+    } else if (counterVar >= 80000) {
+        meterEle.style.width = "80%";
+    } else if (counterVar >= 70000) {
+        meterEle.style.width = "70%";
+    } else if (counterVar >= 60000) {
+        meterEle.style.width = "60%";
+    } else if (counterVar >= 50000) {
+        meterEle.style.width = "50%";
+    } else if (counterVar >= 40000) {
+        meterEle.style.width = "40%";
+    } else if (counterVar >= 30000) {
+        meterEle.style.width = "30%";
+    } else if (counterVar >= 20000) {
+        meterEle.style.width = "20%";
+    } else if (counterVar >= 10000) {
+        meterEle.style.width = "10%";
+    }
+}
+
 function scrollIntoView() {
     scroll(0, 0);
 }
@@ -114,4 +147,5 @@ export {
     scrollIntoView,
     headerClick,
     radioButtonClick,
+    progressBar,
 };

@@ -15,6 +15,7 @@ import {
     scrollIntoView,
     headerClick,
     radioButtonClick,
+    progressBar,
 } from "./functions.js";
 
 let counter = 89914;
@@ -112,32 +113,8 @@ continue2.addEventListener("click", () => {
     bambooAmount.innerHTML = bambooCounter.toLocaleString();
     bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
 
-    if (counter >= 100000) {
-        meter.style.width = "100%";
-        number.innerHTML = "Goal met!";
-    } else if (counter >= 95000) {
-        meter.style.width = "95%";
-    } else if (counter >= 90000) {
-        meter.style.width = "90%";
-    } else if (counter >= 85000) {
-        meter.style.width = "85";
-    } else if (counter >= 80000) {
-        meter.style.width = "80%";
-    } else if (counter >= 70000) {
-        meter.style.width = "70%";
-    } else if (counter >= 60000) {
-        meter.style.width = "60%";
-    } else if (counter >= 50000) {
-        meter.style.width = "50%";
-    } else if (counter >= 40000) {
-        meter.style.width = "40%";
-    } else if (counter >= 30000) {
-        meter.style.width = "30%";
-    } else if (counter >= 20000) {
-        meter.style.width = "20%";
-    } else if (counter >= 10000) {
-        meter.style.width = "10%";
-    }
+    // check the number of backers and adjust the progress bar
+    progressBar(counter, meter, number);
 
     // close the popup
     continueThankYou();
@@ -162,35 +139,13 @@ continue3.addEventListener("click", () => {
     blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
     blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
 
-    if (counter >= 100000) {
-        meter.style.width = "100%";
-        number.innerHTML = "Goal met!";
-    } else if (counter >= 95000) {
-        meter.style.width = "95%";
-    } else if (counter >= 90000) {
-        meter.style.width = "90%";
-    } else if (counter >= 85000) {
-        meter.style.width = "85";
-    } else if (counter >= 80000) {
-        meter.style.width = "80%";
-    } else if (counter >= 70000) {
-        meter.style.width = "70%";
-    } else if (counter >= 60000) {
-        meter.style.width = "60%";
-    } else if (counter >= 50000) {
-        meter.style.width = "50%";
-    } else if (counter >= 40000) {
-        meter.style.width = "40%";
-    } else if (counter >= 30000) {
-        meter.style.width = "30%";
-    } else if (counter >= 20000) {
-        meter.style.width = "20%";
-    } else if (counter >= 10000) {
-        meter.style.width = "10%";
-    }
+    // check the number of backers and adjust the progress bar
+    progressBar(counter, meter, number);
 
+    // close the popup
     continueThankYou();
 
+    // reset the inner values of the inputs to blank
     input1.value = null;
     input2.value = null;
 });
@@ -200,7 +155,6 @@ continue3.addEventListener("click", () => {
 thankYouBtn.addEventListener("click", () => {
     document.querySelector(".thank-you--container").classList.toggle("display");
 
-    // body.classList.toggle("display");
     lightBox.classList.toggle("display");
 });
 
@@ -212,11 +166,8 @@ selectRewardBamboo.addEventListener("click", () => {
     radio2.checked = true;
     radio3.checked = false;
 
-    // body.style.overflow = "visible";
-
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
-    // body.classList.toggle("display");
 
     noReward.classList.remove("display");
     noRewardPledge.classList.remove("display");
@@ -239,11 +190,8 @@ selectRewardBlackEdition.addEventListener("click", () => {
     radio2.checked = false;
     radio3.checked = true;
 
-    // body.style.overflow = "visible";
-
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
-    // body.classList.toggle("display");
 
     noReward.classList.remove("display");
     noRewardPledge.classList.remove("display");
@@ -308,8 +256,8 @@ if (counter >= 100000) {
     meter.style.width = "10%";
 }
 //
-input1.value = null;
-input2.value = null;
+// input1.value = null;
+// input2.value = null;
 //
 // this sets the innerHTML of the ammount of money raised on page load
 number.innerHTML = "$" + counter.toLocaleString();

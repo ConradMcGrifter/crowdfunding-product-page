@@ -1,7 +1,7 @@
 .content--wrap {
     // outline: solid red 2px;
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     position: relative;
     top: -100px;
 
@@ -14,7 +14,7 @@
         background: white;
         text-align: center;
         margin: 0;
-        padding: 3em 2em;
+        padding: $padding;
         border-radius: 10px;
         // border: solid rgba(0, 0, 0, 0.233) 2px;
         box-shadow: $boxShadow;
