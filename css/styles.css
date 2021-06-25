@@ -244,6 +244,13 @@
   text-align: center;
 }
 
+#back-this-project-card .reward .radio {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
 #back-this-project-card .mahogany-special {
   opacity: 0.45;
   -webkit-user-select: none;

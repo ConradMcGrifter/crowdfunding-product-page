@@ -65,6 +65,51 @@ const header4 = document.querySelector(".header-4");
 //
 //
 //
+// setting base conditions
+//
+radio1.checked = false;
+radio2.checked = false;
+radio3.checked = false;
+//
+if (counter >= 100000) {
+    meter.style.width = "100%";
+    number.innerHTML = "Goal met!";
+} else if (counter >= 90000) {
+    meter.style.width = "90%";
+} else if (counter >= 80000) {
+    meter.style.width = "80%";
+} else if (counter >= 70000) {
+    meter.style.width = "70%";
+} else if (counter >= 60000) {
+    meter.style.width = "60%";
+} else if (counter >= 50000) {
+    meter.style.width = "50%";
+} else if (counter >= 40000) {
+    meter.style.width = "40%";
+} else if (counter >= 30000) {
+    meter.style.width = "30%";
+} else if (counter >= 20000) {
+    meter.style.width = "20%";
+} else if (counter >= 10000) {
+    meter.style.width = "10%";
+}
+//
+// input1.value = null;
+// input2.value = null;
+//
+// this sets the innerHTML of the ammount of money raised on page load
+number.innerHTML = "$" + counter.toLocaleString();
+totalBackers.innerHTML = totalBackersCounter.toLocaleString();
+//-----------------------------------
+// this sets the number left of things on page load
+bambooAmount.innerHTML = bambooCounter.toLocaleString();
+bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
+blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
+blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
+//
+//
+//
+//
 //                              EVENT LISTENRS - start
 //
 //
@@ -226,48 +271,3 @@ bookmark.addEventListener("click", () => {
 });
 //                              EVENT LISTENERS - end
 //---------------------------------------------------------
-//
-// setting base conditions
-//
-radio1.checked = false;
-radio2.checked = false;
-radio3.checked = false;
-//
-if (counter >= 100000) {
-    meter.style.width = "100%";
-    number.innerHTML = "Goal met!";
-} else if (counter >= 90000) {
-    meter.style.width = "90%";
-} else if (counter >= 80000) {
-    meter.style.width = "80%";
-} else if (counter >= 70000) {
-    meter.style.width = "70%";
-} else if (counter >= 60000) {
-    meter.style.width = "60%";
-} else if (counter >= 50000) {
-    meter.style.width = "50%";
-} else if (counter >= 40000) {
-    meter.style.width = "40%";
-} else if (counter >= 30000) {
-    meter.style.width = "30%";
-} else if (counter >= 20000) {
-    meter.style.width = "20%";
-} else if (counter >= 10000) {
-    meter.style.width = "10%";
-}
-//
-// input1.value = null;
-// input2.value = null;
-//
-// this sets the innerHTML of the ammount of money raised on page load
-number.innerHTML = "$" + counter.toLocaleString();
-totalBackers.innerHTML = totalBackersCounter.toLocaleString();
-//-----------------------------------
-// this sets the number left of things on page load
-bambooAmount.innerHTML = bambooCounter.toLocaleString();
-bambooAmountSmall.innerHTML = bambooCounter.toLocaleString();
-blackEditionAmount.innerHTML = blackEditionCounter.toLocaleString();
-blackEditionAmountSmall.innerHTML = blackEditionCounter.toLocaleString();
-//
-//
-//
