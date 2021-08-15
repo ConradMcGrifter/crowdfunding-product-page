@@ -165,8 +165,8 @@ continue2.addEventListener("click", () => {
     continueThankYou();
 
     // reset the inner values of the inputs to blank
-    input1.value = null;
-    input2.value = null;
+    input1.value = 25;
+    input2.value = 75;
 });
 
 continue3.addEventListener("click", () => {
@@ -191,8 +191,8 @@ continue3.addEventListener("click", () => {
     continueThankYou();
 
     // reset the inner values of the inputs to blank
-    input1.value = null;
-    input2.value = null;
+    input1.value = 25;
+    input2.value = 75;
 });
 //
 // continue button event listener on the thank you pop up after a reward is selected
@@ -210,6 +210,9 @@ selectRewardBamboo.addEventListener("click", () => {
     radio1.checked = false;
     radio2.checked = true;
     radio3.checked = false;
+
+    input1.value = 25;
+    input2.value = 75;
 
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");
@@ -234,6 +237,9 @@ selectRewardBlackEdition.addEventListener("click", () => {
     radio1.checked = false;
     radio2.checked = false;
     radio3.checked = true;
+
+    input1.value = 25;
+    input2.value = 75;
 
     backThisProjectCard.classList.toggle("display");
     lightBox.classList.toggle("display");

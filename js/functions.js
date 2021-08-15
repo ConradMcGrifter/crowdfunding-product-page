@@ -2,6 +2,9 @@ let radio1 = document.getElementById("radio-1");
 let radio2 = document.getElementById("radio-2");
 let radio3 = document.getElementById("radio-3");
 
+const input1 = document.getElementById("input-ammount-1");
+const input2 = document.getElementById("input-ammount-2");
+
 let backThisProjectCard = document.getElementById("back-this-project-card");
 let lightBox = document.getElementById("lightbox");
 
@@ -17,6 +20,9 @@ function openCloseProjectCard() {
     radio2.checked = false;
     radio3.checked = false;
 
+    input1.value = 25;
+    input2.value = 75;
+
     // body.style.overflow = "visible";
 
     backThisProjectCard.classList.toggle("display");
@@ -31,10 +37,6 @@ function openCloseProjectCard() {
 
     blackEdition.classList.remove("display");
     blackEditionPledge.classList.remove("display");
-
-    // reset the input fields to blank
-    document.getElementById("input-ammount-1").value = null;
-    document.getElementById("input-ammount-2").value = null;
 }
 
 function continueThankYou() {
@@ -148,4 +150,6 @@ export {
     headerClick,
     radioButtonClick,
     progressBar,
+    input1,
+    input2,
 };
